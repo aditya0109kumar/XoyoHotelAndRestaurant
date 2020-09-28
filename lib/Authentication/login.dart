@@ -1,5 +1,6 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:e_shop/Admin/adminLogin.dart';
+import 'package:e_shop/Authentication/homeActivity.dart';
 import 'package:e_shop/Widgets/customTextField.dart';
 import 'package:e_shop/DialogBox/errorDialog.dart';
 import 'package:e_shop/DialogBox/loadingDialog.dart';
@@ -41,7 +42,7 @@ class _LoginState extends State<Login> {
             Padding(
               padding: EdgeInsets.all(8.0),
               child: Text(
-                "Login to yout account",
+                "Login to your account",
                 style: TextStyle(color: Colors.white),
               ),
             ),
@@ -152,7 +153,11 @@ class _LoginState extends State<Login> {
             );
           });
       if (firebaseUser != null) {
-        readData(firebaseUser);
+        readData(firebaseUser).then((s) {
+          Navigator.pop(context);
+          Route route = MaterialPageRoute(builder: (c) => HomeActivity());
+          Navigator.pushReplacement(context, route);
+        });
       }
     });
   }

@@ -126,7 +126,14 @@ class _RegisterState extends State<Register> {
   }
 
   Future<void> _selectAndPickImage() async {
+
+
+
+
     _imageFile = await ImagePicker.pickImage(source: ImageSource.gallery);
+
+
+    
   }
 
   Future<void> registerButton() {
@@ -255,6 +262,7 @@ class _RegisterState extends State<Register> {
       'email': fUser.email,
       'name': _nameTextEditingController.text.trim(),
       'url': userImageUrl,
+      Xoyo.userCartList : ["garbageValue"],
     });
 
     await Xoyo.sharedPreferences.setString("uid", fUser.uid);

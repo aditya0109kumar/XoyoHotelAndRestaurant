@@ -19,7 +19,7 @@ import 'Counters/totalMoney.dart';
 import 'Store/storehome.dart';
 import 'package:animated_splash_screen/animated_splash_screen.dart';
 
-import 'Widgets/hotelBookingForm.dart';                                                                                                                        
+import 'Widgets/hotelBookingForm.dart';
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -71,7 +71,7 @@ class _SplashScreenState extends State<SplashScreen> {
         Route route = MaterialPageRoute(builder: (_) => StoreHome());
         Navigator.pushReplacement(context, route);
       } else {
-        Route route = MaterialPageRoute(builder: (_) => HomeActivity());
+        Route route = MaterialPageRoute(builder: (_) => AuthenticScreen());
         Navigator.pushReplacement(context, route);
       }
     });
