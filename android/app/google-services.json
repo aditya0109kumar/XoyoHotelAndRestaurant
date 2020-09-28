@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "782131463534",
+    "firebase_url": "https://restaurantandhotelfinal.firebaseio.com",
+    "project_id": "restaurantandhotelfinal",
+    "storage_bucket": "restaurantandhotelfinal.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:782131463534:android:e783f9dd4f5937983fad7f",
+        "android_client_info": {
+          "package_name": "com.skywebsoftindia.restaurantandhotelapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "782131463534-cu5fu43mdtm26kin9cum35bkn9ernalh.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD29rWqNA5YdBQ8XaDnNktYZ_MU8DgMM_c"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "782131463534-cu5fu43mdtm26kin9cum35bkn9ernalh.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
