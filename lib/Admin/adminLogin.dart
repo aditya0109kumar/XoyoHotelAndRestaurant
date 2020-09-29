@@ -27,26 +27,6 @@ class AdminSignInPage extends StatelessWidget {
           width: 150,
         ),
         centerTitle: true,
-        bottom: TabBar(
-          tabs: [
-            Tab(
-              icon: Icon(
-                Icons.lock,
-                color: Colors.white,
-              ),
-              text: "Login",
-            ),
-            Tab(
-              icon: Icon(
-                Icons.perm_contact_calendar,
-                color: Colors.white,
-              ),
-              text: "Register",
-            )
-          ],
-          indicatorColor: Colors.white,
-          indicatorWeight: 5.0,
-        ),
       ),
       body: AdminSignInScreen(),
     );

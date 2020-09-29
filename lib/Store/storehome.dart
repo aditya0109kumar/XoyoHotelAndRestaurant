@@ -10,7 +10,7 @@ import 'package:e_shop/Config/config.dart';
 import '../Widgets/loadingWidget.dart';
 import '../Widgets/myDrawer.dart';
 import '../Widgets/searchBox.dart';
-import '../Models/item.dart';
+import '../Models/hotel.dart';
 
 double width;
 

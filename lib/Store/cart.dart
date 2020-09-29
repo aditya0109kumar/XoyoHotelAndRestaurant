@@ -2,7 +2,7 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:e_shop/Config/config.dart';
 import 'package:e_shop/Address/address.dart';
 import 'package:e_shop/Widgets/loadingWidget.dart';
-import 'package:e_shop/Models/item.dart';
+import 'package:e_shop/Models/hotel.dart';
 import 'package:e_shop/Counters/cartitemcounter.dart';
 import 'package:e_shop/Counters/totalMoney.dart';
 import 'package:flutter/material.dart';
