@@ -6,6 +6,7 @@ import 'package:e_shop/Authentication/homeActivity.dart';
 import 'package:e_shop/Widgets/customTextField.dart';
 import 'package:e_shop/DialogBox/errorDialog.dart';
 import 'package:e_shop/DialogBox/loadingDialog.dart';
+import 'package:e_shop/main.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_storage/firebase_storage.dart';
 import 'package:flutter/cupertino.dart';
@@ -46,7 +47,7 @@ class _RegisterState extends State<Register> {
         mainAxisSize: MainAxisSize.max,
         children: [
           InkWell(
-            onTap: _selectAndPickImage,
+            onTap: chooseFile,
             child: CircleAvatar(
               radius: _screenWidth * 0.15,
               backgroundColor: Colors.white,
@@ -127,13 +128,19 @@ class _RegisterState extends State<Register> {
     );
   }
 
-  Future<void> _selectAndPickImage() async {
-     _imageFile = await ImagePicker.pickImage(source: ImageSource.gallery); 
-    
+  /* Future<void> _selectAndPickImage() async {
+    _imageFile = await ImagePicker.pickImage(source: ImageSource.gallery);
+  } */
+  Future chooseFile() async {
+    await ImagePicker.pickImage(source: ImageSource.gallery).then((image) {
+      setState(() {
+        _imageFile = image;
+      });
+    });
   }
 
   Future<void> registerButton() {
-   /*  if (_imageFile == null) {
+    /*  if (_imageFile == null) {
       showDialog(
           context: context,
           builder: (c) {
@@ -155,16 +162,26 @@ class _RegisterState extends State<Register> {
               message: "Please complete all the fields",
             );
           });
-    } else {
+    } /* else {
       _passwordTextEditingController.text ==
               _cPasswordTextEditingController.text
           ? _phoneTextEditingController.text.isNotEmpty &&
                   _passwordTextEditingController.text.isNotEmpty &&
                   _cPasswordTextEditingController.text.isNotEmpty &&
                   _nameTextEditingController.text.isNotEmpty
-              ? _registerUser()
+              ? uploadToStorage()
               : displayDialog("Please fill up the registration form completely")
-          : displayDialog("Password does not match");
+           : displayDialog("Password does not match");
+    } */
+
+    else if (_passwordTextEditingController.text !=
+        _cPasswordTextEditingController.text) {
+      displayDialog("Password does not match");
+    } else if (_phoneTextEditingController.text.isNotEmpty &&
+        _passwordTextEditingController.text.isNotEmpty &&
+        _cPasswordTextEditingController.text.isNotEmpty &&
+        _nameTextEditingController.text.isNotEmpty) {
+      uploadToStorage();
     }
   }
 
@@ -183,18 +200,19 @@ class _RegisterState extends State<Register> {
     final pr = ProgressDialog(context,
         type: ProgressDialogType.Normal, isDismissible: false, showLogs: false);
     pr.style(
-        message: 'Registering, Please wait',
-        borderRadius: 10.0,
-        backgroundColor: Colors.white,
-        progressWidget: CircularProgressIndicator(),
-        elevation: 10.0,
-        insetAnimCurve: Curves.easeInOut,
-        progress: 0.0,
-        maxProgress: 100.0,
-        progressTextStyle: TextStyle(
-            color: Colors.black, fontSize: 13.0, fontWeight: FontWeight.w400),
-        messageTextStyle: TextStyle(
-            color: Colors.black, fontSize: 19.0, fontWeight: FontWeight.w600));
+      message: 'Registering, Please wait',
+      borderRadius: 10.0,
+      backgroundColor: Colors.white,
+      progressWidget: CircularProgressIndicator(),
+      elevation: 10.0,
+      insetAnimCurve: Curves.easeInOut,
+      progress: 0.0,
+      maxProgress: 100.0,
+      progressTextStyle: TextStyle(
+          color: Colors.black, fontSize: 13.0, fontWeight: FontWeight.w400),
+      messageTextStyle: TextStyle(
+          color: Colors.black, fontSize: 19.0, fontWeight: FontWeight.w600),
+    );
     /* showDialog(
         context: context,
         builder: (c) {
@@ -224,11 +242,6 @@ class _RegisterState extends State<Register> {
 
   FirebaseAuth _auth = FirebaseAuth.instance;
   Future<void> _registerUser() async {
-
-        
-
-
-    /*
     FirebaseUser firebaseUser;
     await _auth
         .createUserWithEmailAndPassword(
@@ -251,10 +264,10 @@ class _RegisterState extends State<Register> {
     if (firebaseUser != null) {
       saveUserInfoToFireStore(firebaseUser).then((value) {
         Navigator.pop(context);
-        Route route = MaterialPageRoute(builder: (c) => AuthenticScreen());
+        Route route = MaterialPageRoute(builder: (c) => SplashScreen());
         Navigator.pushReplacement(context, route);
       });
-    }  */
+    }
   }
 
   Future saveUserInfoToFireStore(FirebaseUser fUser) async {
