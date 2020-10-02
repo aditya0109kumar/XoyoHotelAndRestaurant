@@ -71,7 +71,7 @@ class _SplashScreenState extends State<SplashScreen> {
         Route route = MaterialPageRoute(builder: (_) => StoreHome());
         Navigator.pushReplacement(context, route);
       } else {
-        Route route = MaterialPageRoute(builder: (_) => AuthenticScreen());
+        Route route = MaterialPageRoute(builder: (_) => HomeActivity());
         Navigator.pushReplacement(context, route);
       }
     });
@@ -94,7 +94,7 @@ class _SplashScreenState extends State<SplashScreen> {
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               Image.asset(
-                "images/burger.png",
+                "images/hotel_image.png",
                 height: 300.0,
                 width: 300.0,
               ),

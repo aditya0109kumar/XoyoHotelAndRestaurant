@@ -1,6 +1,7 @@
 // ignore: avoid_web_libraries_in_flutter
 import 'dart:io';
 import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:e_shop/Authentication/authenication.dart';
 import 'package:e_shop/Authentication/homeActivity.dart';
 import 'package:e_shop/Widgets/customTextField.dart';
 import 'package:e_shop/DialogBox/errorDialog.dart';
@@ -34,6 +35,7 @@ class _RegisterState extends State<Register> {
   final GlobalKey<FormState> _formKey = GlobalKey<FormState>();
   String userImageUrl = "";
   File _imageFile;
+  final picker = ImagePicker();
 
   @override
   Widget build(BuildContext context) {
@@ -126,18 +128,12 @@ class _RegisterState extends State<Register> {
   }
 
   Future<void> _selectAndPickImage() async {
-
-
-
-
-    _imageFile = await ImagePicker.pickImage(source: ImageSource.gallery);
-
-
+     _imageFile = await ImagePicker.pickImage(source: ImageSource.gallery); 
     
   }
 
   Future<void> registerButton() {
-    /* if (_imageFile == null) {
+   /*  if (_imageFile == null) {
       showDialog(
           context: context,
           builder: (c) {
@@ -228,6 +224,11 @@ class _RegisterState extends State<Register> {
 
   FirebaseAuth _auth = FirebaseAuth.instance;
   Future<void> _registerUser() async {
+
+        
+
+
+    /*
     FirebaseUser firebaseUser;
     await _auth
         .createUserWithEmailAndPassword(
@@ -250,10 +251,10 @@ class _RegisterState extends State<Register> {
     if (firebaseUser != null) {
       saveUserInfoToFireStore(firebaseUser).then((value) {
         Navigator.pop(context);
-        Route route = MaterialPageRoute(builder: (c) => HomeActivity());
+        Route route = MaterialPageRoute(builder: (c) => AuthenticScreen());
         Navigator.pushReplacement(context, route);
       });
-    }
+    }  */
   }
 
   Future saveUserInfoToFireStore(FirebaseUser fUser) async {
@@ -262,7 +263,7 @@ class _RegisterState extends State<Register> {
       'email': fUser.email,
       'name': _nameTextEditingController.text.trim(),
       'url': userImageUrl,
-      Xoyo.userCartList : ["garbageValue"],
+      Xoyo.userCartList: ["garbageValue"],
     });
 
     await Xoyo.sharedPreferences.setString("uid", fUser.uid);

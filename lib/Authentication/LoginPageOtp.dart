@@ -1,3 +1,4 @@
+import 'package:e_shop/Authentication/authenication.dart';
 import 'package:e_shop/Authentication/homeActivity.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
@@ -150,7 +151,7 @@ class _LoginScreenState extends State<LoginScreen> {
                     if (user != null) {
                       Navigator.of(context).pop();
 
-                      Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) =>HomeActivity()));
+                      Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) =>AuthenticScreen()));
 
                     } else {
                       Navigator.of(context).pop();

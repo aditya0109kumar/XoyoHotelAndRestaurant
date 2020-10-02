@@ -11,18 +11,19 @@ class SearchService {
 
 
 
-class SearchProduct extends StatefulWidget {
+class SearchHotel extends StatefulWidget {
   @override
-  _SearchProductState createState() => new _SearchProductState();
+  _SearchHotelState createState() => new _SearchHotelState();
 }
 
 
 
-class _SearchProductState extends State<SearchProduct> {
+class _SearchHotelState extends State<SearchHotel> {
   @override
   Widget build(BuildContext context) {
     return SafeArea(
-    );
+      
+        );
   }
 }
 

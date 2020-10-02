@@ -9,15 +9,15 @@ import 'package:image_picker/image_picker.dart';
 import 'package:path_provider/path_provider.dart';
 import 'package:image/image.dart' as ImD;
 
-class UploadPageCopy extends StatefulWidget {
+class UploadPage extends StatefulWidget {
   @override
-  _UploadPageCopyState createState() => _UploadPageCopyState();
+  _UploadPageState createState() => _UploadPageState();
 }
 
-class _UploadPageCopyState extends State<UploadPageCopy>
-    with AutomaticKeepAliveClientMixin<UploadPageCopy> {
+class _UploadPageState extends State<UploadPage>
+    with AutomaticKeepAliveClientMixin<UploadPage> {
   bool get wantKeepAlive => true;
-  File file1, file2, file3, file4, file5, file6, file7, file8, file9, file10;
+  File file;
   TextEditingController _descriptionTextEditingController =
       TextEditingController();
   TextEditingController _priceTextEditingController = TextEditingController();
@@ -28,7 +28,7 @@ class _UploadPageCopyState extends State<UploadPageCopy>
   bool uploading;
   @override
   Widget build(BuildContext context) {
-    return file1 == null
+    return file == null
         ? displayAdminHomeScreen()
         : displayAdminUploadFormScreen();
   }
@@ -134,74 +134,18 @@ class _UploadPageCopyState extends State<UploadPageCopy>
             ),
             children: [
               SimpleDialogOption(
-                child: Text("Select Hotel pic 1",
+                child: Text("Capture with Camera",
                     style: TextStyle(
                       color: Colors.red[600],
                     )),
-                onPressed: pickPhotoFromGallery1,
+                onPressed: capturePhotoWithCamera,
               ),
               SimpleDialogOption(
-                child: Text("Select Hotel pic 2",
+                child: Text("Select from Gallery",
                     style: TextStyle(
                       color: Colors.red[600],
                     )),
-                onPressed: pickPhotoFromGallery1,
-              ),
-              SimpleDialogOption(
-                child: Text("Select Hotel pic 3",
-                    style: TextStyle(
-                      color: Colors.red[600],
-                    )),
-                onPressed: pickPhotoFromGallery1,
-              ),
-              SimpleDialogOption(
-                child: Text("Select Hotel pic 4",
-                    style: TextStyle(
-                      color: Colors.red[600],
-                    )),
-                onPressed: pickPhotoFromGallery1,
-              ),
-              SimpleDialogOption(
-                child: Text("Select Hotel pic 5",
-                    style: TextStyle(
-                      color: Colors.red[600],
-                    )),
-                onPressed: pickPhotoFromGallery1,
-              ),
-              SimpleDialogOption(
-                child: Text("Select Hotel pic 6",
-                    style: TextStyle(
-                      color: Colors.red[600],
-                    )),
-                onPressed: pickPhotoFromGallery1,
-              ),
-              SimpleDialogOption(
-                child: Text("Select Hotel pic 7",
-                    style: TextStyle(
-                      color: Colors.red[600],
-                    )),
-                onPressed: pickPhotoFromGallery1,
-              ),
-              SimpleDialogOption(
-                child: Text("Select Hotel pic 8",
-                    style: TextStyle(
-                      color: Colors.red[600],
-                    )),
-                onPressed: pickPhotoFromGallery1,
-              ),
-              SimpleDialogOption(
-                child: Text("Select Hotel pic 9",
-                    style: TextStyle(
-                      color: Colors.red[600],
-                    )),
-                onPressed: pickPhotoFromGallery1,
-              ),
-              SimpleDialogOption(
-                child: Text("Select Hotel pic 10",
-                    style: TextStyle(
-                      color: Colors.red[600],
-                    )),
-                onPressed: pickPhotoFromGallery1,
+                onPressed: pickPhotoFromGallery,
               ),
               SimpleDialogOption(
                 child: Text("Cancel",
@@ -222,97 +166,17 @@ class _UploadPageCopyState extends State<UploadPageCopy>
     File imageFile1 = await ImagePicker.pickImage(
         source: ImageSource.camera, maxHeight: 680.0, maxWidth: 970.0);
     setState(() {
-      file1 = imageFile1;
+      file = imageFile1;
     });
   }
 
-  pickPhotoFromGallery1() async {
+  pickPhotoFromGallery() async {
     Navigator.pop(context);
-    File imageFile2 = await ImagePicker.pickImage(
+    File imageFile1 = await ImagePicker.pickImage(
       source: ImageSource.gallery,
     );
     setState(() {
-      file2 = imageFile2;
-    });
-  }
-
-  pickPhotoFromGallery2() async {
-    Navigator.pop(context);
-    File imageFile3 = await ImagePicker.pickImage(
-      source: ImageSource.gallery,
-    );
-    setState(() {
-      file3 = imageFile3;
-    });
-  }
-
-  pickPhotoFromGallery3() async {
-    Navigator.pop(context);
-    File imageFile4 = await ImagePicker.pickImage(
-      source: ImageSource.gallery,
-    );
-    setState(() {
-      file4 = imageFile4;
-    });
-  }
-
-  pickPhotoFromGallery4() async {
-    Navigator.pop(context);
-    File imageFile5 = await ImagePicker.pickImage(
-      source: ImageSource.gallery,
-    );
-    setState(() {
-      file5 = imageFile5;
-    });
-  }
-
-  pickPhotoFromGallery5() async {
-    Navigator.pop(context);
-    File imageFile6 = await ImagePicker.pickImage(
-      source: ImageSource.gallery,
-    );
-    setState(() {
-      file6 = imageFile6;
-    });
-  }
-
-  pickPhotoFromGallery6() async {
-    Navigator.pop(context);
-    File imageFile7 = await ImagePicker.pickImage(
-      source: ImageSource.gallery,
-    );
-    setState(() {
-      file7 = imageFile7;
-    });
-  }
-
-  pickPhotoFromGallery7() async {
-    Navigator.pop(context);
-    File imageFile8 = await ImagePicker.pickImage(
-      source: ImageSource.gallery,
-    );
-    setState(() {
-      file8 = imageFile8;
-    });
-  }
-
-  pickPhotoFromGallery8() async {
-    Navigator.pop(context);
-    File imageFile9 = await ImagePicker.pickImage(
-      source: ImageSource.gallery,
-    );
-    setState(() {
-      file9 = imageFile9;
-    });
-  }
-
-  pickPhotoFromGallery9() async {
-    Navigator.pop(context);
-    File imageFile10 = await ImagePicker.pickImage(
-      source: ImageSource.gallery,
-    );
-    setState(() {
-      file10 = imageFile10;
+      file = imageFile1;
     });
   }
 
@@ -346,19 +210,7 @@ class _UploadPageCopyState extends State<UploadPageCopy>
         ),
         actions: [
           FlatButton(
-            onPressed: uploading
-                ? null
-                : () =>
-                    uploadImageAndSaveItemInfo1() &&
-                    uploadImageAndSaveItemInfo2() &&
-                    uploadImageAndSaveItemInfo3() &&
-                    uploadImageAndSaveItemInfo4() &&
-                    uploadImageAndSaveItemInfo5() &&
-                    uploadImageAndSaveItemInfo6() &&
-                    uploadImageAndSaveItemInfo7() &&
-                    uploadImageAndSaveItemInfo8() &&
-                    uploadImageAndSaveItemInfo9() &&
-                    uploadImageAndSaveItemInfo10() ,
+            onPressed: uploading ? null : () => uploadImageAndSaveItemInfo(),
             child: Text(
               "Add",
               style: TextStyle(
@@ -382,7 +234,7 @@ class _UploadPageCopyState extends State<UploadPageCopy>
                 child: Container(
                   decoration: BoxDecoration(
                       image: DecorationImage(
-                          image: FileImage(file1), fit: BoxFit.cover)),
+                          image: FileImage(file), fit: BoxFit.cover)),
                 ),
               ),
             ),
@@ -476,16 +328,7 @@ class _UploadPageCopyState extends State<UploadPageCopy>
 
   clearFormInfo() {
     setState(() {
-      file1 = null;
-      file2 = null;
-      file3 = null;
-      file4 = null;
-      file5 = null;
-      file6 = null;
-      file7 = null;
-      file8 = null;
-      file9 = null;
-      file10 = null;
+      file = null;
       _priceTextEditingController.clear();
       _descriptionTextEditingController.clear();
       _shortInfoTextEditingController.clear();
@@ -493,83 +336,11 @@ class _UploadPageCopyState extends State<UploadPageCopy>
     });
   }
 
-  uploadImageAndSaveItemInfo1() async {
+  uploadImageAndSaveItemInfo() async {
     setState(() {
       uploading = true;
     });
-    String imageDownloadUrl = await uploadItemImage(file1);
-    saveHotelInfo(imageDownloadUrl);
-  }
-
-  uploadImageAndSaveItemInfo2() async {
-    setState(() {
-      uploading = true;
-    });
-    String imageDownloadUrl = await uploadItemImage(file2);
-    saveHotelInfo(imageDownloadUrl);
-  }
-
-  uploadImageAndSaveItemInfo3() async {
-    setState(() {
-      uploading = true;
-    });
-    String imageDownloadUrl = await uploadItemImage(file3);
-    saveHotelInfo(imageDownloadUrl);
-  }
-
-  uploadImageAndSaveItemInfo4() async {
-    setState(() {
-      uploading = true;
-    });
-    String imageDownloadUrl = await uploadItemImage(file4);
-    saveHotelInfo(imageDownloadUrl);
-  }
-
-  uploadImageAndSaveItemInfo5() async {
-    setState(() {
-      uploading = true;
-    });
-    String imageDownloadUrl = await uploadItemImage(file5);
-    saveHotelInfo(imageDownloadUrl);
-  }
-
-  uploadImageAndSaveItemInfo6() async {
-    setState(() {
-      uploading = true;
-    });
-    String imageDownloadUrl = await uploadItemImage(file6);
-    saveHotelInfo(imageDownloadUrl);
-  }
-
-  uploadImageAndSaveItemInfo7() async {
-    setState(() {
-      uploading = true;
-    });
-    String imageDownloadUrl = await uploadItemImage(file7);
-    saveHotelInfo(imageDownloadUrl);
-  }
-
-  uploadImageAndSaveItemInfo8() async {
-    setState(() {
-      uploading = true;
-    });
-    String imageDownloadUrl = await uploadItemImage(file8);
-    saveHotelInfo(imageDownloadUrl);
-  }
-
-  uploadImageAndSaveItemInfo9() async {
-    setState(() {
-      uploading = true;
-    });
-    String imageDownloadUrl = await uploadItemImage(file9);
-    saveHotelInfo(imageDownloadUrl);
-  }
-
-  uploadImageAndSaveItemInfo10() async {
-    setState(() {
-      uploading = true;
-    });
-    String imageDownloadUrl = await uploadItemImage(file10);
+    String imageDownloadUrl = await uploadItemImage(file);
     saveHotelInfo(imageDownloadUrl);
   }
 
@@ -595,16 +366,7 @@ class _UploadPageCopyState extends State<UploadPageCopy>
     });
 
     setState(() {
-      file1 = null;
-      file2 = null;
-      file3 = null;
-      file4 = null;
-      file5 = null;
-      file6 = null;
-      file7 = null;
-      file8 = null;
-      file9 = null;
-      file10 = null;
+      file = null;
       uploading = false;
       hotelId = DateTime.now().millisecondsSinceEpoch.toString();
       _descriptionTextEditingController.clear();
