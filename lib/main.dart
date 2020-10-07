@@ -7,6 +7,7 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'Authentication/LoginPageOtp.dart';
+import 'Authentication/TESTOTP.dart';
 import 'Authentication/authenication.dart';
 import 'package:e_shop/Config/config.dart';
 import 'Authentication/registerCreated.dart';
@@ -19,6 +20,7 @@ import 'Counters/totalMoney.dart';
 import 'Store/storehome.dart';
 import 'package:animated_splash_screen/animated_splash_screen.dart';
 
+import 'Vendors/vendor_login.dart';
 import 'Widgets/hotelBookingForm.dart';
 
 Future<void> main() async {
@@ -71,7 +73,7 @@ class _SplashScreenState extends State<SplashScreen> {
         Route route = MaterialPageRoute(builder: (_) => StoreHome());
         Navigator.pushReplacement(context, route);
       } else {
-        Route route = MaterialPageRoute(builder: (_) => HomeActivity());
+        Route route = MaterialPageRoute(builder: (_) => VendorLoginPage());
         Navigator.pushReplacement(context, route);
       }
     });
