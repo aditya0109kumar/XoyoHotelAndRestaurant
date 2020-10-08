@@ -6,6 +6,8 @@ import 'package:e_shop/Widgets/customTextField.dart';
 import 'package:e_shop/DialogBox/errorDialog.dart';
 import 'package:flutter/material.dart';
 
+import 'adminDashboard.dart';
+
 class AdminSignInPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -171,7 +173,7 @@ class _AdminSignInScreenState extends State<AdminSignInScreen> {
             _passwordTextEditingController.text = "";
           });
 
-          Route route = MaterialPageRoute(builder: (c) => UploadPageCopy());
+          Route route = MaterialPageRoute(builder: (c) => AdminDashBoardPage());
           Navigator.pushReplacement(context, route);
         }
       });

@@ -1,14 +1,17 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:e_shop/Admin/admin_drawer.dart';
 import 'package:e_shop/Admin/uploadItems.dart';
 import 'package:e_shop/Admin/uploadItemsCopy.dart';
 import 'package:e_shop/Authentication/authenication.dart';
 import 'package:e_shop/Widgets/customTextField.dart';
 import 'package:e_shop/DialogBox/errorDialog.dart';
 import 'package:flutter/material.dart';
+import 'package:multilevel_drawer/multilevel_drawer.dart';
 
 class AdminDashBoardPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
+    
     return Scaffold(
       appBar: AppBar(
         flexibleSpace: Container(
@@ -29,6 +32,66 @@ class AdminDashBoardPage extends StatelessWidget {
         ),
         centerTitle: true,
       ),
+      drawer: AdminDrawer(),
+      
+      /* MultiLevelDrawer(
+          backgroundColor: Colors.white,
+          rippleColor: Colors.white,
+          subMenuBackgroundColor: Colors.grey.shade100,
+          header: Container(                  // Header for Drawer
+            height: 400,
+            child: Center(child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: <Widget>[
+                Image.asset("assets/dp_default.png",width: 100,height: 100,),
+                SizedBox(height: 10,),
+                Text("RetroPortal Studio")
+              ],
+            )),
+          ),
+
+          children: [           // Child Elements for Each Drawer Item
+            MLMenuItem(
+                leading: Icon(Icons.person),
+                trailing: Icon(Icons.arrow_right),
+                content: Text(
+                  "My Profile",
+                ),
+                subMenuItems: [
+                  MLSubmenu(onClick: () {}, submenuContent: Text("Option 1")),
+                  MLSubmenu(onClick: () {}, submenuContent: Text("Option 2")),
+                  MLSubmenu(onClick: () {}, submenuContent: Text("Option 3")),
+                ],
+                onClick: () {}),
+            MLMenuItem(
+                leading: Icon(Icons.settings),
+                trailing: Icon(Icons.arrow_right),
+                content: Text("Settings"),
+                onClick: () {},
+                subMenuItems: [
+                  MLSubmenu(onClick: () {}, submenuContent: Text("Option 1")),
+                  MLSubmenu(onClick: () {}, submenuContent: Text("Option 2"))
+                ]),
+            MLMenuItem(
+              leading: Icon(Icons.notifications),
+              content: Text("Notifications"),
+              onClick: () {},
+            ),
+            MLMenuItem(
+                leading: Icon(Icons.payment),
+                trailing: Icon(Icons.arrow_right),
+                content: Text(
+                  "Payments",
+                ),
+                subMenuItems: [
+                  MLSubmenu(onClick: () {}, submenuContent: Text("Option 1")),
+                  MLSubmenu(onClick: () {}, submenuContent: Text("Option 2")),
+                  MLSubmenu(onClick: () {}, submenuContent: Text("Option 3")),
+                  MLSubmenu(onClick: () {}, submenuContent: Text("Option 4")),
+                ],
+                onClick: () {}),
+          ],
+        ), */
       body: AdminDashBoardScreen(),
     );
   }

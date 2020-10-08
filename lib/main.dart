@@ -1,11 +1,14 @@
 import 'dart:async';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:e_shop/Counters/BookQuantity.dart';
+import 'package:e_shop/testhomepage.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:shared_preferences/shared_preferences.dart';
+import 'Admin/adminDashboard.dart';
+import 'Admin/adminLogin.dart';
 import 'Authentication/LoginPageOtp.dart';
 import 'Authentication/TESTOTP.dart';
 import 'Authentication/authenication.dart';
@@ -20,8 +23,11 @@ import 'Counters/totalMoney.dart';
 import 'Store/storehome.dart';
 import 'package:animated_splash_screen/animated_splash_screen.dart';
 
+import 'Vendors/PropertyDetailForm.dart';
+import 'Vendors/VendorDashBoard.dart';
 import 'Vendors/vendor_login.dart';
 import 'Widgets/hotelBookingForm.dart';
+
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -73,7 +79,7 @@ class _SplashScreenState extends State<SplashScreen> {
         Route route = MaterialPageRoute(builder: (_) => StoreHome());
         Navigator.pushReplacement(context, route);
       } else {
-        Route route = MaterialPageRoute(builder: (_) => VendorLoginPage());
+        Route route = MaterialPageRoute(builder: (_) => AdminDashBoardPage());
         Navigator.pushReplacement(context, route);
       }
     });
