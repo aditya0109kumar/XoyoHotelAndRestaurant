@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:multilevel_drawer/multilevel_drawer.dart';
 
+import 'AddVendor.dart';
+
 class AdminDrawer extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -74,9 +76,9 @@ class AdminDrawer extends StatelessWidget {
   }
 
   void showVendorDetails() {
-  // MaterialPageRoute(builder: (context) => VendorDetails());
+  //MaterialPageRoute(builder: (context) => VendorDetails());
   }
   void showAddVendor(){
-  //  MaterialPageRoute(builder: (context) => AddVendor());
+   MaterialPageRoute(builder: (context) => AddVendor());
   }
 }
