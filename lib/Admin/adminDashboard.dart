@@ -11,7 +11,6 @@ import 'package:multilevel_drawer/multilevel_drawer.dart';
 class AdminDashBoardPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    
     return Scaffold(
       appBar: AppBar(
         flexibleSpace: Container(
@@ -26,72 +25,13 @@ class AdminDashBoardPage extends StatelessWidget {
           ),
         ),
         title: Image.asset(
-          "images/xoyo.png",
+          "images/xoyo_vendor_text.png",
           height: 50,
-          width: 150,
+          //width: 150,
         ),
         centerTitle: true,
       ),
       drawer: AdminDrawer(),
-      
-      /* MultiLevelDrawer(
-          backgroundColor: Colors.white,
-          rippleColor: Colors.white,
-          subMenuBackgroundColor: Colors.grey.shade100,
-          header: Container(                  // Header for Drawer
-            height: 400,
-            child: Center(child: Column(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: <Widget>[
-                Image.asset("assets/dp_default.png",width: 100,height: 100,),
-                SizedBox(height: 10,),
-                Text("RetroPortal Studio")
-              ],
-            )),
-          ),
-
-          children: [           // Child Elements for Each Drawer Item
-            MLMenuItem(
-                leading: Icon(Icons.person),
-                trailing: Icon(Icons.arrow_right),
-                content: Text(
-                  "My Profile",
-                ),
-                subMenuItems: [
-                  MLSubmenu(onClick: () {}, submenuContent: Text("Option 1")),
-                  MLSubmenu(onClick: () {}, submenuContent: Text("Option 2")),
-                  MLSubmenu(onClick: () {}, submenuContent: Text("Option 3")),
-                ],
-                onClick: () {}),
-            MLMenuItem(
-                leading: Icon(Icons.settings),
-                trailing: Icon(Icons.arrow_right),
-                content: Text("Settings"),
-                onClick: () {},
-                subMenuItems: [
-                  MLSubmenu(onClick: () {}, submenuContent: Text("Option 1")),
-                  MLSubmenu(onClick: () {}, submenuContent: Text("Option 2"))
-                ]),
-            MLMenuItem(
-              leading: Icon(Icons.notifications),
-              content: Text("Notifications"),
-              onClick: () {},
-            ),
-            MLMenuItem(
-                leading: Icon(Icons.payment),
-                trailing: Icon(Icons.arrow_right),
-                content: Text(
-                  "Payments",
-                ),
-                subMenuItems: [
-                  MLSubmenu(onClick: () {}, submenuContent: Text("Option 1")),
-                  MLSubmenu(onClick: () {}, submenuContent: Text("Option 2")),
-                  MLSubmenu(onClick: () {}, submenuContent: Text("Option 3")),
-                  MLSubmenu(onClick: () {}, submenuContent: Text("Option 4")),
-                ],
-                onClick: () {}),
-          ],
-        ), */
       body: AdminDashBoardScreen(),
     );
   }
@@ -103,53 +43,25 @@ class AdminDashBoardScreen extends StatefulWidget {
 }
 
 class _AdminDashBoardScreenState extends State<AdminDashBoardScreen> {
-  final TextEditingController _firstNameTextEditingController =
-      TextEditingController();
-  final TextEditingController _secondNameTextEditingController =
-      TextEditingController();
-
-  Widget bodyData() => SingleChildScrollView(
-        child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: <Widget>[
-              CustomTextField(
-                controller: _firstNameTextEditingController,
-                hintText: "First Name",
-                isObsecure: false,
-              ),
-              CustomTextField(
-                controller: _secondNameTextEditingController,
-                hintText: "Second Name",
-                isObsecure: false,
-              ),
-              CustomTextField(
-                
-              )
-            ]),
-      );
   @override
   Widget build(BuildContext context) {
-    // TODO: implement build
-    double _screenWidth = MediaQuery.of(context).size.width,
-        _screenHeight = MediaQuery.of(context).size.height;
-
-    Container(
-      child: bodyData(),
-    );
-
-    throw UnimplementedError();
+    return StreamBuilder(
+        stream: Firestore.instance.collection("vendors").snapshots(),
+        builder: (context, snapshot) {
+          if (!snapshot.hasData) {
+            return CircularProgressIndicator();
+          }
+          return ListView.builder(
+            itemCount: snapshot.data.documents.length,
+            itemBuilder: (context, index) {
+              DocumentSnapshot vendors = snapshot.data.documents[index];
+              return ListTile(
+                leading: FlatButton(onPressed: null, child: null),
+                title: Text(vendors['hotel_name']),
+                subtitle: Text(vendors['name']),
+              );
+            },
+          );
+        });
   }
 }
-
-class Name {
-  String firstName;
-  String lastName;
-
-  Name({this.firstName, this.lastName});
-}
-
-var names = <Name>[
-  Name(firstName: "Hotel", lastName: "Mandakini"),
-  Name(firstName: "Landmark", lastName: "Hotel"),
-  Name(firstName: "Hotel", lastName: "Presidency"),
-];

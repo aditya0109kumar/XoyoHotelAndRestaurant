@@ -1,0 +1,140 @@
+Terms and Conditions trivago Business Studio
+1. Scope of Application
+Welcome to the trivago Business Studio. The terms "we", "us", "our", “trivago” and "trivago N.V." refer to trivago N.V. having its offices at Kesselstraße 5-7, 40221 Düsseldorf, Germany, a public company with limited liability (naamloze vennootschap) incorporated under the laws of the Netherlands and registered with the trade register of the Chamber of Commerce in Amsterdam under registration number 67222927. Access to the trivago Business Studio is offered to you conditioned upon your acceptance without modification of all the terms, conditions, and notices set forth below (collectively, the "Terms"). We recommend that you print a copy of these Terms for future reference. Please read these Terms carefully, as they contain important information. By accessing or using the trivago Business Studio, you acknowledge and agree to have read, understood, and agreed to be legally bound by these Terms. If you do not agree to these Terms, please do not use or access the trivago Business Studio.
+
+trivago N.V., in addition to the worldwide hotel price comparison and the travel community, runs a hotel database on its platform in which hoteliers can register their hotels. trivago Business Studio is offered exclusively to companies that run hotels or hotel operators (henceforth "hotelier").
+
+These Terms are valid for all services that trivago provides to hoteliers in connection with the trivago Business Studio. trivago is entitled, through simple notification, to change or supplement these Terms if the changes or supplements are necessary and if the changes or supplements will not inflict a substantial disadvantage on the hotelier. Changes are necessary in order to comply with changes in legal requirements. The hotelier acknowledges his approval. The hotelier will be notified of changes to these Terms in their account. Subsidiary agreements, amendments and supplements must be confirmed in writing by trivago.
+
+2. Subject
+The subject of the contract is the hotel entry and the touristic offer or amendment of the current hotelier’s hotel listing in the online trivago hotel database on the trivago websites. The contractual relationship is a result of the hotelier registering online at https://studio.trivago.com. The hotelier must register with the requested data in the registration form on trivago Business Studio. After completing the registration, the activation of the account will follow. trivago accepts the contract via confirmation (by e-mail) of a successful registration. The hotelier must check their uploaded content for correctness immediately after activation. Any errors must be reported immediately or corrected. The hotelier is responsible for the correctness of their data. The hotelier will only upload information and photographic materials that do not infringe upon the rights of third parties.
+
+3. trivago Business Studio
+Within the trivago Business Studio trivago offers an online-application platform which offers specific software provided by trivago and/or third-party application providers. trivago Business Studio enables the hotelier to conclude a contract with trivago and/or the respective third-party application providers. If trivago is not the provider of an application, trivago will only function as a platform and not bear any responsibility for the accessibility, functionality and/ or any other service provided by the third-party application provider. The legal relationship between the hotelier and the respective third-party application provider is not subject matter of these Terms.
+
+trivago Business Studio provides user-friendly IT-solutions for its hoteliers. trivago Business Studio enables its hoteliers to transfer its data to trivago. trivago prepares those data on behalf of the hotelier and enables the hotelier to access its own data with various applications. Applications of trivago, such as Property details, Analytics Monitor and Reputation Insights, as well applications of third-party application providers can be purchased via the trivago Business Studio. For the duration of the hotelier’s participation in trivago Business Studio, trivago is obligated to store, process and protect the data, which were transferred to trivago by the hotelier, from unauthorized access in accordance with the current state of the art.
+
+The main functional feature of the trivago Business Studio is the usability of the data with further applications. If the hotelier concludes a contract with a third-party application provider via the trivago Business Studio, the hotelier thereby declares its consent that trivago is entitled to make the data, which the hotelier transferred to trivago, available to the respective third-party application provider. The hotelier declares that the third-party application provider directly processes the data on behalf of the hotelier. According to the will of the contractual parties, the third-party application provider is the processor of the hotelier and not the Sub processor or 2nd Level Processor of trivago within the meaning of Art. 28 (2) and (4) GDPR. The hotelier was informed that the hotelier has to conclude adequate contracts with the third-party application provider if it is legally required. trivago is not liable for damages to data or property caused by third-party application providers.
+
+4. Specific Obligations Hoteliers
+The hotelier undertakes to use the provided user names and passwords responsibly and to prevent abuse by employees. The hotelier agrees that it is possible to conclude legally valid contracts via the trivago Business Studio by using usernames and passwords. trivago shall assume that, all hotelier employees who have access to the trivago Business Studio are entitled to place an order in its name and for its account and are entitled to conclude contracts with trivago or with a third-party application provider.
+
+The hotelier will instruct its’ employees to store the access data with care so that it is inaccessible to third parties. The hotelier accepts that it is liable for damages caused by the use of its access data. The hotelier is liable if one of the hotelier´s employees misuses the access data or if the hotelier´s employees do not store the access data so that it is inaccessible to third parties.
+
+The hotelier has been informed that the trivago Business Studio is also a trading area. The hotelier is able to buy and use applications or content of third-party application providers via the trivago Business Studio.
+
+5. Special Instructions for the use of the Applications
+If the hotelier buys applications from third-party application providers via the trivago Business Studio, the hotelier concludes a contract with the third-party application provider. The terms and conditions of the third-party application provider shall apply for the contractual relationship between the hotelier and the third-party application provider unless something else was agreed. trivago only provides the trading area.
+
+'Important Legal Note: Generally, the use of application, which were ordered via the trivago Business Studio, requires a valid contract. The termination of this contract does not affect the contracts concluded via the trivago Business Studio between third-party application providers and the hotelier.'
+
+trivago is not liable towards the hotelier for the function of the application or for damages caused by applications or the support provided by the third-party application provider. The hotelier expressly agrees with this exclusion of liability.
+
+trivago is entitled to remove single applications or content from the trivago Business Studio. The hotelier renounces towards trivago each and every claim in connection with the unavailability of applications (regardless of the legal title).
+
+The hotelier notes that it may be possible that certain contents or applications will not be available to all hoteliers in all countries due to licensing terms.
+
+The hotelier is obligated to report functional failure and other technical problems of the system immediately and as precisely as possible.
+
+6. Content Expansion (Visitor Reviews and Visitor Photos)
+Reviews from the cooperating partners of trivago are available and published on the trivago websites, any trivago mobile or tablet application, or any other feature or other trivago platform as additional information to the respective hotels. This applies exclusively to reviews from third parties on which trivago and the hotelier have no influence and accordingly do not claim rights. The hotelier does not have the right to demand the deletion of reviews provided that there are no statutory provisions stating otherwise.
+
+7. Domain
+The hotelier guarantees that the domain name which is linked does not infringe upon the brand of another company nor is trademarked. In the event that a case is made against these rights by a third party, the hotelier will not hold trivago liable for indemnification.
+
+There shall be no claims against trivago due to linking. The hotelier is obligated to immediately inform trivago about changes to the given URL under the terms of contract in written form (e-mail will be considered sufficient), so that the entry on the trivago domains always links to the correct hotel URL.
+
+8. Data
+The hotelier allows trivago to process the personal data entered under these terms and conditions.
+
+trivago uses Google Analytics, a web analytics service provided by Google, Inc. (“Google”). Google Analytics uses “cookies”, which are text files placed on your computer to help the website analyze how visitors use the site. The information generated by the cookie about your use of the website will be transmitted to and stored by Google on servers in the United States. In case of activation of the IP anonymization, Google will truncate/anonymize the last octet of the IP address for Member States of the European Union as well as for other parties to the Agreement on the European Economic Area. Only in exceptional cases, the full IP address is sent to and shortened by Google servers in the USA. On behalf of trivago Google will use this information for the purpose of evaluating your use of the website, compiling reports on website activity for website operators and providing other services relating to website activity and internet usage to the website provider. Google will not associate your IP address with any other data held by Google. You may refuse the use of cookies by selecting the appropriate settings on your browser. However, please note that if you do this, you may not be able to use the full functionality of this website. Furthermore, you can prevent Google’s collection and use of data (including your IP address) by downloading and installing the browser plug-in available under https://tools.google.com/dlpage/gaoptout?hl=en-GB . Further information concerning the terms and conditions of use and data privacy can be found at http://www.google.com/analytics/terms/us.html or at https://www.google.de/intl/en_us/policies/ .
+
+Please note that trivago has expanded Google Analytics’ code to the extent that an anonymized detection of IP addresses (so called IP-Masking) is ensured.
+
+If you make use of the possibility to create an account on trivago, we will collect, process and store personal data as a part of the process of setting up an account. As a first step we will only collect your e-mail address. It is also possible to open an account under a pseudonym. Moreover, you have the possibility to give us more personal data, like name, gender, address and residence.
+
+9. Licences
+The hotelier reserves the rights to any content which he uploads and publishes on websites of trivago. The hotelier grants trivago a temporally and spatially unlimited, non-exclusive, transferable, sub-licensable, royalty-free license to use any content which he uploads on websites of trivago. In this context content includes especially, but without limitation, pictures, videos, texts and information.
+
+The right of use expressly includes all known and unknown forms of supply options on websites of trivago, in particular the possibility of integrating the content within websites on which the hotel or hotelier’s facility is presented freely to the public.
+
+'In particular the hotelier grants the following temporally and regionally unlimited rights:'
+
+the right of reproduction, public access and distribution, i.e. making the content publicly available, reproducing it unlimitedly and displaying it by means of any technical possibilities, including, in particular, digital integration on websites;
+
+the right of making the content available on demand, i.e. saving the content, keeping it available for the public, transmitting it to one or more polling users in all digital electronic databases, electronic data networks and networks of telecommunications services;
+
+the right to public representation and communication to the public, i.e. the right to reproduce and display the content for commercial or non-commercial purposes in public by means of recording media, picture carrier, image recordings, multimedia support or other data carriers, in particular magnetic tapes, magnetic tape cassettes, video discs, chips, in all formats, using analog and digital methods and techniques;
+
+the right to advertise, i.e. the right to use the content to advertise websites, not only on the internet but in any other media as well, especially on television and in print media.
+
+The right of use also includes a partial use of the content and use in conjunction with other content.
+
+The hotelier warrants that he is the owner of the transferred rights and that he is able to grant the rights to trivago, effective immediately. The hotelier also guarantees that the content uploaded is free of third party rights that may conflict with the rights of use. Furthermore, the hotelier guarantees that no personal rights of third parties are infringed by the use of the content, in particular, that persons appearing in images agree with the contractual use of the content.
+
+10. Term
+trivago grants the hotelier for use by the hotelier, a non-exclusive, revocable license limited to the term of its participation in trivago Business Studio to access and use the trivago Business Studio, which is a specific software provided as a service for the hoteliers. The hotelier may not sublicense the trivago Business Studio unless the hotelier has received written permission from trivago. This license is automatically revoked in the event of the termination of a hotelier’s participation in trivago Business Studio and can be revoked by trivago in the event of a breach of the Terms by the hotelier.
+
+Terminating the participation in trivago Business Studio is made possible when the hotelier sends trivago an e-mail (studio@trivago.com) declaring the termination of participation in trivago Business Studio and then receives a confirmation e-mail from trivago. After termination of the contract, the hotelier can request the deletion of their entry from trivago. The hotelier can send this deletion request at any time with a corresponding message by e-mail to studio@trivago.com or by post to the postal address trivago N.V., Kesselstraße 5 – 7, 40221 Düsseldorf, Germany.
+
+The hotelier can only request the deletion of the data that they made available. Contents of third parties, in particular from participants in the trivago crowd and the general hotel entry, are not affected by the deletion.
+
+trivago reserves the right to develop, amend and update the design, functionality and abilities of trivago Business Studio from time to time, as well as make adjustments to the software. trivago will inform the hotelier about these instances in their account as well as by e-mail. trivago does not take responsibility for the error-free usage of the trivago websites and/or Business Studio.
+
+11. Intellectual Property Rights
+Hotelier acknowledges that all rights, title and interest in and to the services and the software, together with its codes, derivative works, organization, structure, interfaces, any documentation, data, trade names, trademarks, trade secrets, proprietary information or other related materials is, and at all times shall remain, the sole and exclusive property of trivago. Except the right to use the software, as expressly provided herein, these Terms do not grant to hotelier any rights to, or in, patents, copyrights, database rights, trade secrets, trade names, trademarks (whether registered or unregistered) or any other rights or licenses with respect to the services or the software.
+
+The hotelier shall not remove or modify any program markings or any notice of trivago or its licensors’ proprietary rights. Hotelier shall not attempt, or directly or indirectly allow any authorized user or other third party to attempt to copy, modify, duplicate, create derivative works from, frame, mirror, republish, reverse compile, disassemble, reverse engineer, download, transmit or distribute all or any portion of the services and/or software in any form or media or by any means.
+
+12. Availability
+We do not guarantee that the trivago Business Studio and any of the applications (whether provided by trivago or a third-party application provider) will always be available, be uninterrupted, secure or free from bugs or viruses, nor that the trivago Business Studio will be free from errors or omissions.
+
+We shall not be liable for any delay or failure to perform resulting from causes outside of our reasonable control, including, without limitation, any failure to perform due to unforeseen circumstances or cause beyond our control such as acts of god, war, terrorism, riots, embargoes, acts of civil or military authorities, fire, floods, accidents, strikes, epidemic or other natural disaster, shortages of transportation facilities, fuel, energy, labour or materials or a failure of public or private telecommunications networks.
+
+13. Liability and Indemnification
+'Subject to the provisions below trivago’s statutory liability for damages shall be limited as follows:'
+
+trivago shall be liable only up to the amount of damages as typically foreseeable at the time of entering into this agreement in respect of damages caused by a negligent breach of a material contractual obligation (i.e. a contractual duty the fulfillment of which enables the proper implementation of this agreement, the breach of which endangers the purpose of this agreement and on the fulfillment of which the hotelier regularly relies);
+
+trivago shall not be liable for damages caused by a negligent breach of a non-material contractual obligation;
+
+trivago shall not have any liability to the hotelier for loss of profits, revenue, data or any consequential or indirect damages unless trivago acted willfully or gross negligently;
+
+the hotelier shall take all reasonable measures to mitigate damages, including in particular, to recover the data and to make back-up copies on a regular basis;
+
+the aforesaid limitation of liability shall not apply to any mandatory statutory liability (in particular to liability under the German Product Liability Act), liability for damages caused by assuming a specific guarantee or willful or grossly negligent misconduct, or any kind of willfully or negligently caused personal injuries.
+
+An inspection of the content uploaded by the hotelier, community or other third parties to the websites of trivago will not be made.
+
+The hotelier is fully responsible for the content of their internet presence on the trivago websites. They are also responsible for the content of the website which is linked on trivago via the URL added by the hotelier. The hotelier is liable for any violation against legal provisions and/or good morals. After concrete evidence is received, trivago will delete content that violates valid rights and/or good morals, immediately terminate the contractual relationship to the creator of the content and make claims for damages against the owner of this content.
+
+'The hotelier agrees not to take actions that generate automated page impressions, are intended to harm and/or interfere with software/hardware in any way and/or contradict laws and good morals in other ways. This includes but is not limited to:'
+
+the use of viruses or other computer programs that harm software or hardware or can interfere with the use of computers;
+
+the use of bots, spiders, scrapers or other malware;
+
+the use of any program that serves the purpose of collecting or using personal data of other users (especially for commercial use);
+
+generating an improperly high amount of page impressions;
+
+other similar acts that are intended to harm or could harm the functionality of the trivago websites.
+
+'The hotelier agrees to release trivago from any claims by third parties that arise from the following:'
+
+a culpable breach of this agreement and/or the terms and conditions of trivago N.V.;
+
+a culpable breach of valid rights or the rights of third parties;
+
+any improper use of the trivago websites and/or trivago Business Studio.
+
+14. Miscellaneous
+trivago shall not be held liable for contracts which the hotelier agrees to with third-party application providers through the trivago Business Studio.
+
+Any changes or additions to these conditions or to the contract based on these Terms shall only be effective in writing. This also applies to an agreement on the rescindment of the requirement in written form.
+
+If one of the provisions in these Terms are or becomes invalid, the validity of the remaining provisions shall remain unaffected. The parties are obliged to replace the invalid provision with a valid provision which will best achieve the economically desired result.
+
+These Terms are valid for all services that trivago provides hoteliers in connection with the trivago Business Studio. trivago is entitled, though simple notification, to change or supplement these Terms if the changes or supplements are necessary and if the changes or supplements will not inflict a substantial disadvantage on the hotelier. Changes are necessary in order to comply with changes in legal requirements. The hotelier acknowledges his approval. The hotelier will be notified of changes to these Terms in their account.
+
+This contract is governed by the laws of the Federal Republic of Germany. Düsseldorf is the exclusive place of jurisdiction for all disputes arising from this contractual relationship.

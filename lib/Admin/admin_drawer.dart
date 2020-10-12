@@ -12,7 +12,7 @@ class AdminDrawer extends StatelessWidget {
           Container(
             width: double.infinity,
             padding: EdgeInsets.all(20),
-            color: Theme.of(context).primaryColor,
+            color: Colors.red[700],
             child: Center(
               child: Column(
                 children: <Widget>[
@@ -27,7 +27,7 @@ class AdminDrawer extends StatelessWidget {
                       shape: BoxShape.circle,
                       image: DecorationImage(
                           image: NetworkImage(
-                            'https://4.bp.blogspot.com/-ww35TX848nE/VwKzp_AExYI/AAAAAAAAACA/juHbkc0DQE4D_LLzUrldo1oQqrY6WV6lA/s400/apple_HLS.png',
+                            'https://www.pinclipart.com/picdir/middle/122-1221261_admin-svg-png-icon-free-download-325788-sunny.png',
                           ),
                           fit: BoxFit.fill),
                     ),
@@ -41,17 +41,7 @@ class AdminDrawer extends StatelessWidget {
             ),
           ),
           ListTile(
-            leading: Icon(Icons.person),
-            title: Text(
-              'Vendor Details',
-              style: TextStyle(
-                fontSize: 18,
-              ),
-            ),
-            onTap:showVendorDetails,
-          ),
-          ListTile(
-            leading: Icon(Icons.settings),
+            leading: Icon(Icons.add),
             title: Text(
               'Add Vendor',
               style: TextStyle(
@@ -61,7 +51,17 @@ class AdminDrawer extends StatelessWidget {
             onTap: showAddVendor,
           ),
           ListTile(
-            leading: Icon(Icons.arrow_back),
+            leading: Icon(Icons.person),
+            title: Text(
+              'Vendor Details',
+              style: TextStyle(
+                fontSize: 18,
+              ),
+            ),
+            onTap: showVendorDetails,
+          ),
+          ListTile(
+            leading: Icon(Icons.exit_to_app),
             title: Text(
               'Logout',
               style: TextStyle(
@@ -76,9 +76,9 @@ class AdminDrawer extends StatelessWidget {
   }
 
   void showVendorDetails() {
-  //MaterialPageRoute(builder: (context) => VendorDetails());
+    //MaterialPageRoute(builder: (context) => VendorDetails());
   }
-  void showAddVendor(){
-   MaterialPageRoute(builder: (context) => AddVendor());
+  void showAddVendor() {
+    MaterialPageRoute(builder: (context) => AddVendor());
   }
 }

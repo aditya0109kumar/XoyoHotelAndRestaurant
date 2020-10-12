@@ -1,4 +1,7 @@
+// ignore: avoid_web_libraries_in_flutter
 import 'dart:async';
+// ignore: avoid_web_libraries_in_flutter
+//import 'dart:html';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:e_shop/Counters/BookQuantity.dart';
 import 'package:e_shop/testhomepage.dart';
@@ -7,6 +10,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:shared_preferences/shared_preferences.dart';
+import 'Admin/AddVendor.dart';
 import 'Admin/adminDashboard.dart';
 import 'Admin/adminLogin.dart';
 import 'Authentication/LoginPageOtp.dart';
@@ -27,7 +31,6 @@ import 'Vendors/PropertyDetailForm.dart';
 import 'Vendors/VendorDashBoard.dart';
 import 'Vendors/vendor_login.dart';
 import 'Widgets/hotelBookingForm.dart';
-
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -79,7 +82,7 @@ class _SplashScreenState extends State<SplashScreen> {
         Route route = MaterialPageRoute(builder: (_) => StoreHome());
         Navigator.pushReplacement(context, route);
       } else {
-        Route route = MaterialPageRoute(builder: (_) => AdminDashBoardPage());
+        Route route = MaterialPageRoute(builder: (_) => AddVendor());
         Navigator.pushReplacement(context, route);
       }
     });
