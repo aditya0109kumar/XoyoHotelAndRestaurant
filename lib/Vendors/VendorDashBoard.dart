@@ -70,7 +70,7 @@ class _MyHomePageState extends State<MyHomePage> {
           indicatorWeight: 5.0,
         ),
       ),
-      
+      drawer: AdminDrawer(),
       body: new ListView(
         padding: const EdgeInsets.all(8),
         children: <Widget>[

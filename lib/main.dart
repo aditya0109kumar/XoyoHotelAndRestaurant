@@ -78,14 +78,15 @@ class _SplashScreenState extends State<SplashScreen> {
 
   displaySplash() {
     Timer(Duration(seconds: 5), () async {
-      if (await Xoyo.auth.currentUser() != null) {
-        Route route = MaterialPageRoute(builder: (_) => StoreHome());
-        Navigator.pushReplacement(context, route);
-      } else {
-        Route route = MaterialPageRoute(builder: (_) => AdminDashBoardPage());
-        Navigator.pushReplacement(context, route);
-      }
-    });
+      // if (await Xoyo.auth.currentUser() != null) {
+      //   Route route = MaterialPageRoute(builder: (_) => StoreHome());
+      //   Navigator.pushReplacement(context, route);
+      // } else {
+      Route route = MaterialPageRoute(builder: (_) => AdminSignInPage());
+      Navigator.pushReplacement(context, route);
+    }
+        // }
+        );
   }
 
   @override

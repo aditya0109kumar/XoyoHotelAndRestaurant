@@ -1,6 +1,8 @@
+// ignore: avoid_web_libraries_in_flutter
+//import 'dart:js';
 import 'package:flutter/material.dart';
-import 'package:multilevel_drawer/multilevel_drawer.dart';
-
+//import 'package:multilevel_drawer/multilevel_drawer.dart';
+import 'package:path/path.dart';
 import 'AddVendor.dart';
 
 class AdminDrawer extends StatelessWidget {
@@ -48,18 +50,23 @@ class AdminDrawer extends StatelessWidget {
                 fontSize: 18,
               ),
             ),
-            onTap: showAddVendor,
+            onTap: () {
+              Navigator.push(
+                context,
+                new MaterialPageRoute(builder: (context) => AddVendor()),
+              );
+            },
           ),
-          ListTile(
-            leading: Icon(Icons.person),
-            title: Text(
-              'Vendor Details',
-              style: TextStyle(
-                fontSize: 18,
-              ),
-            ),
-            onTap: showVendorDetails,
-          ),
+          // ListTile(
+          //   leading: Icon(Icons.person),
+          //   title: Text(
+          //     'Vendor Details',
+          //     style: TextStyle(
+          //       fontSize: 18,
+          //     ),
+          //   ),
+          //   onTap: showVendorDetails,
+          // ),
           ListTile(
             leading: Icon(Icons.exit_to_app),
             title: Text(
@@ -78,7 +85,5 @@ class AdminDrawer extends StatelessWidget {
   void showVendorDetails() {
     //MaterialPageRoute(builder: (context) => VendorDetails());
   }
-  void showAddVendor() {
-    MaterialPageRoute(builder: (context) => AddVendor());
-  }
+  void showAddVendor() {}
 }

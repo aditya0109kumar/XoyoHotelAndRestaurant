@@ -31,7 +31,7 @@ class AddVendor extends StatelessWidget {
           ),
         ),
         title: Image.asset(
-          "images/xoyo.png",
+          "images/xoyo_admin_text.png",
           height: 50,
           width: 150,
         ),
@@ -138,6 +138,15 @@ class _AddVendorScreenState extends State<AddVendorScreen> {
                   hintText: "Last Name",
                   isObsecure: false,
                 ),
+                TextField(
+                  maxLengthEnforced: true,
+                  maxLength: 10,
+                  obscureText: false,
+                  decoration: InputDecoration(
+                    border: OutlineInputBorder(),
+                    labelText: 'Phone Number',
+                  ),
+                ),
                 DropdownButton<String>(
                   value: jobPosition,
                   hint: Text("Job Position in the Business"),
@@ -178,15 +187,14 @@ class _AddVendorScreenState extends State<AddVendorScreen> {
                     );
                   }).toList(),
                 ),
-                 TextFormField(
-                   controller: _phoneTextEditingController,
-                inputFormatters: <TextInputFormatter>[
-                  LengthLimitingTextInputFormatter(10),
-                  WhitelistingTextInputFormatter.digitsOnly,
-                  BlacklistingTextInputFormatter.singleLineFormatter,
-                  
-                ],
-              ),
+                TextFormField(
+                  controller: _phoneTextEditingController,
+                  inputFormatters: <TextInputFormatter>[
+                    LengthLimitingTextInputFormatter(10),
+                    WhitelistingTextInputFormatter.digitsOnly,
+                    BlacklistingTextInputFormatter.singleLineFormatter,
+                  ],
+                ),
                 CustomTextField(
                   controller: _hotelNameTextEditingController,
                   data: Icons.lock,
@@ -331,25 +339,31 @@ class _AddVendorScreenState extends State<AddVendorScreen> {
       'email': fUser.email,
       'name': fullName,
       'password': _passwordTextEditingController.text.trim(),
-      'phone': _phoneTextEditingController.text.trim(), // _phoneTextEditingController.text.trim(),
+      'phone': _phoneTextEditingController.text
+          .trim(), // _phoneTextEditingController.text.trim(),
       'hotel_name': _hotelNameTextEditingController.text.trim(),
     });
 
-    await XoyoAdmin.sharedPreferences.setString("uid", fUser.uid);
-    // await Xoyo.sharedPreferences.setString(Xoyo.userUID, fUser.uid);
-    await XoyoAdmin.sharedPreferences
-        .setString(XoyoAdmin.userEmail, fUser.email);
-    await XoyoAdmin.sharedPreferences.setString(XoyoAdmin.userName, fullName);
-    //await XoyoAdmin.sharedPreferences.setString(Xoyo.userAvatarUrl, userImageUrl);
-    //await Xoyo.sharedPreferences.setStringList(Xoyo.userCartList, ["garbageValue"]);
+    // await XoyoAdmin.sharedPreferences.setString("uid", fUser.uid);
+    // // await Xoyo.sharedPreferences.setString(Xoyo.userUID, fUser.uid);
+    // await XoyoAdmin.sharedPreferences
+    //     .setString(XoyoAdmin.userEmail, fUser.email);
+    // await XoyoAdmin.sharedPreferences.setString(XoyoAdmin.userName, fullName);
+    // //await XoyoAdmin.sharedPreferences.setString(Xoyo.userAvatarUrl, userImageUrl);
+    // //await Xoyo.sharedPreferences.setStringList(Xoyo.userCartList, ["garbageValue"]);
 
     pr.hide().then((isHidden) {
       print(isHidden);
     });
 
-    Navigator.pop(context);
-    Route route = MaterialPageRoute(builder: (c) => AdminDashBoardPage());
-    Navigator.pushReplacement(context, route);
+    // Navigator.pop(context);
+    // Route route = MaterialPageRoute(builder: (context) => AdminDashBoardPage());
+    // Navigator.pushReplacement(context, route);
+
+    Navigator.push(
+      context,
+      new MaterialPageRoute(builder: (context) => AdminDashBoardPage()),
+    );
   }
 
   displayDialog(String msg) {

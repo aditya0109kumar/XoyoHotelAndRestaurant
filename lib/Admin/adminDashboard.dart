@@ -26,7 +26,7 @@ class AdminDashBoardPage extends StatelessWidget {
           ),
         ),
         title: Image.asset(
-          "images/xoyo_vendor_text.png",
+          "images/xoyo_admin_text.png",
           height: 50,
           //width: 150,
         ),
@@ -67,7 +67,7 @@ class _AdminDashBoardScreenState extends State<AdminDashBoardScreen> {
                 trailing: IconButton(
                   icon: new Icon(Icons.info),
                   highlightColor: Colors.pink,
-                  onPressed: _infoButton,
+                  onPressed: () => _infoButton(context, index, snapshot),
                 ), // IconData(59354, fontFamily: 'MaterialIcons')
 
 /*  
@@ -87,6 +87,7 @@ class _AdminDashBoardScreenState extends State<AdminDashBoardScreen> {
         context: context,
         builder: (context) {
           return AlertDialog(
+            backgroundColor: Colors.orange,
             title: Text('Delete Hotel'),
             content: Text('Do you want to delete this hotel?'),
             actions: <Widget>[
@@ -105,8 +106,56 @@ class _AdminDashBoardScreenState extends State<AdminDashBoardScreen> {
     Firestore.instance.runTransaction((Transaction myTransaction) async {
       await myTransaction.delete(snapshot.data.documents[index].reference);
     });
+    Fluttertoast.showToast(
+      msg: "The Hotel has been Deleted",
+      toastLength: Toast.LENGTH_SHORT,
+      gravity: ToastGravity.CENTER,
+      timeInSecForIosWeb: 1,
+      backgroundColor: Colors.red[200],
+      textColor: Colors.white,
+      fontSize: 16.0,
+    );
     Navigator.of(context).pop();
   }
 
-  void _infoButton() {}
+  void _infoButton(BuildContext context, int index, snapshot) {
+    DocumentSnapshot vendorInfo = snapshot.data.documents[index];
+
+    String hotelName = 'Hotel: ' + vendorInfo['hotel_name'];
+    String authorityName = 'By: ' + vendorInfo['name'];
+    String hotelPhone = 'Phone: ' + vendorInfo['phone'];
+    String hotelEmail = 'Email: ' + vendorInfo['email'];
+
+    showDialog(
+        context: context,
+        builder: (context) {
+          return AlertDialog(
+            title: Text('$hotelName'),
+            content: Container(
+                height: 400.0,
+                width: 400.0,
+                child: ListView(
+                  children: <Widget>[
+                    ListTile(
+                      title: Text(hotelName),
+                    ),
+                    ListTile(
+                      title: Text(authorityName),
+                    ),
+                    ListTile(
+                      title: Text(hotelPhone),
+                    ),
+                    ListTile(
+                      title: Text(hotelEmail),
+                    ),
+                  ],
+                )),
+            actions: <Widget>[
+              FlatButton(
+                  onPressed: () => Navigator.of(context).pop(),
+                  child: Text('OK')),
+            ],
+          );
+        });
+  }
 }
