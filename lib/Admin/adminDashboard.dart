@@ -7,6 +7,7 @@ import 'package:e_shop/Widgets/customTextField.dart';
 import 'package:e_shop/DialogBox/errorDialog.dart';
 import 'package:flutter/material.dart';
 import 'package:multilevel_drawer/multilevel_drawer.dart';
+import 'package:fluttertoast/fluttertoast.dart';
 
 class AdminDashBoardPage extends StatelessWidget {
   @override
@@ -56,12 +57,56 @@ class _AdminDashBoardScreenState extends State<AdminDashBoardScreen> {
             itemBuilder: (context, index) {
               DocumentSnapshot vendors = snapshot.data.documents[index];
               return ListTile(
-                leading: FlatButton(onPressed: null, child: null),
+                leading: CircleAvatar(
+                  backgroundImage: NetworkImage(
+                      'https://cdn.imgbin.com/3/2/3/imgbin-hotel-animation-hotel-building-gray-hotel-building-illustration-54wQz6tugKw2g3XW7FsAAbv3i.jpg'),
+                ), //
                 title: Text(vendors['hotel_name']),
                 subtitle: Text(vendors['name']),
+                onLongPress: () async => _popupDialog(context, index, snapshot),
+                trailing: IconButton(
+                  icon: new Icon(Icons.info),
+                  highlightColor: Colors.pink,
+                  onPressed: _infoButton,
+                ), // IconData(59354, fontFamily: 'MaterialIcons')
+
+/*  
+ Icon(
+      Icons.info_outline,
+      color: Colors.green,
+      size: 30.0,
+    )  */
               );
             },
           );
         });
   }
+
+  void _popupDialog(BuildContext context, int index, snapshot) {
+    showDialog(
+        context: context,
+        builder: (context) {
+          return AlertDialog(
+            title: Text('Delete Hotel'),
+            content: Text('Do you want to delete this hotel?'),
+            actions: <Widget>[
+              FlatButton(
+                  onPressed: () => deleteDocument(index, snapshot),
+                  child: Text('OK')),
+              FlatButton(
+                  onPressed: () => Navigator.of(context).pop(),
+                  child: Text('CANCEL')),
+            ],
+          );
+        });
+  }
+
+  void deleteDocument(int index, snapshot) {
+    Firestore.instance.runTransaction((Transaction myTransaction) async {
+      await myTransaction.delete(snapshot.data.documents[index].reference);
+    });
+    Navigator.of(context).pop();
+  }
+
+  void _infoButton() {}
 }

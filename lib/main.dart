@@ -82,7 +82,7 @@ class _SplashScreenState extends State<SplashScreen> {
         Route route = MaterialPageRoute(builder: (_) => StoreHome());
         Navigator.pushReplacement(context, route);
       } else {
-        Route route = MaterialPageRoute(builder: (_) => AddVendor());
+        Route route = MaterialPageRoute(builder: (_) => AdminDashBoardPage());
         Navigator.pushReplacement(context, route);
       }
     });
