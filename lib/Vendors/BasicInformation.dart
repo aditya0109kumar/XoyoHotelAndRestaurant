@@ -173,12 +173,12 @@ class _BasicInfo extends State<BasicInformation> {
                     ], // Only numbers can be entered
                   ),
                   RaisedButton(
-                    onPressed: _showDialog,
+                    onPressed: _showDialogFacilities,
                     child: Text('Facilities & Services',
                         style: TextStyle(fontSize: 20)),
                   ),
                   RaisedButton(
-                    onPressed: _showDialogHealth,
+                    onPressed: _showDialogHealthAndWellness,
                     child: Text('Facilities & Services',
                         style: TextStyle(fontSize: 20)),
                   ),
@@ -213,7 +213,7 @@ class _BasicInfo extends State<BasicInformation> {
       });
   }
 
-  void _showDialog() {
+  void _showDialogFacilities() {
     showDialog(
       context: context,
       barrierDismissible: false,
@@ -526,7 +526,7 @@ class _BasicInfo extends State<BasicInformation> {
     );
   }
 
-  void _showDialogHealth() {
+  void _showDialogHealthAndWellness() {
     showDialog(
       context: context,
       barrierDismissible: false,
@@ -547,7 +547,7 @@ class _BasicInfo extends State<BasicInformation> {
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: <Widget>[
                   Text(
-                    "Facilities and Services",
+                    "Health and Wellness",
                     style: TextStyle(fontSize: 20),
                   ),
                   SizedBox(
@@ -562,7 +562,7 @@ class _BasicInfo extends State<BasicInformation> {
                   ),
                   CheckboxListTile(
                     value: false,
-                    title: Text("Business Center"),
+                    title: Text("Beauty Salon"),
                     onChanged: (value) {
                       setState(() {});
                     },
@@ -572,7 +572,7 @@ class _BasicInfo extends State<BasicInformation> {
                   ),
                   CheckboxListTile(
                     value: false,
-                    title: Text("Disco/Night club"),
+                    title: Text("Steam Room"),
                     onChanged: (value) {
                       setState(() {});
                     },
@@ -582,7 +582,7 @@ class _BasicInfo extends State<BasicInformation> {
                   ),
                   CheckboxListTile(
                     value: false,
-                    title: Text("Elevator"),
+                    title: Text("Gym"),
                     onChanged: (value) {
                       setState(() {});
                     },
@@ -592,7 +592,7 @@ class _BasicInfo extends State<BasicInformation> {
                   ),
                   CheckboxListTile(
                     value: false,
-                    title: Text("Terrace"),
+                    title: Text("Hairdresser"),
                     onChanged: (value) {
                       setState(() {});
                     },
@@ -602,7 +602,7 @@ class _BasicInfo extends State<BasicInformation> {
                   ),
                   CheckboxListTile(
                     value: false,
-                    title: Text("Bell service"),
+                    title: Text("Outdoor Swimming Pool"),
                     onChanged: (value) {
                       setState(() {});
                     },
@@ -612,7 +612,7 @@ class _BasicInfo extends State<BasicInformation> {
                   ),
                   CheckboxListTile(
                     value: false,
-                    title: Text("Pets allowed"),
+                    title: Text("Indoor Swimming Pool"),
                     onChanged: (value) {
                       setState(() {});
                     },
@@ -622,7 +622,7 @@ class _BasicInfo extends State<BasicInformation> {
                   ),
                   CheckboxListTile(
                     value: false,
-                    title: Text("Hotel safe"),
+                    title: Text("Massage"),
                     onChanged: (value) {
                       setState(() {});
                     },
@@ -632,7 +632,7 @@ class _BasicInfo extends State<BasicInformation> {
                   ),
                   CheckboxListTile(
                     value: false,
-                    title: Text("Conference Rooms"),
+                    title: Text("Sauna"),
                     onChanged: (value) {
                       setState(() {});
                     },
@@ -642,7 +642,7 @@ class _BasicInfo extends State<BasicInformation> {
                   ),
                   CheckboxListTile(
                     value: false,
-                    title: Text("Non-Smoking Rooms"),
+                    title: Text("Solarium"),
                     onChanged: (value) {
                       setState(() {});
                     },
@@ -652,7 +652,7 @@ class _BasicInfo extends State<BasicInformation> {
                   ),
                   CheckboxListTile(
                     value: false,
-                    title: Text("Computer with Internet"),
+                    title: Text("Direct Beach Access"),
                     onChanged: (value) {
                       setState(() {});
                     },
@@ -662,7 +662,7 @@ class _BasicInfo extends State<BasicInformation> {
                   ),
                   CheckboxListTile(
                     value: false,
-                    title: Text("Casino"),
+                    title: Text("Beach/Sun Umbrellas"),
                     onChanged: (value) {
                       setState(() {});
                     },
@@ -672,7 +672,7 @@ class _BasicInfo extends State<BasicInformation> {
                   ),
                   CheckboxListTile(
                     value: false,
-                    title: Text("24-hour reception"),
+                    title: Text("Towels at the pool/beach"),
                     onChanged: (value) {
                       setState(() {});
                     },
@@ -682,7 +682,7 @@ class _BasicInfo extends State<BasicInformation> {
                   ),
                   CheckboxListTile(
                     value: false,
-                    title: Text("Laundry service"),
+                    title: Text("Wellness center/Spa"),
                     onChanged: (value) {
                       setState(() {});
                     },
@@ -692,7 +692,7 @@ class _BasicInfo extends State<BasicInformation> {
                   ),
                   CheckboxListTile(
                     value: false,
-                    title: Text("Washing machine"),
+                    title: Text("Whirlpool/Hot tub"),
                     onChanged: (value) {
                       setState(() {});
                     },
@@ -702,7 +702,7 @@ class _BasicInfo extends State<BasicInformation> {
                   ),
                   CheckboxListTile(
                     value: false,
-                    title: Text("Ironing board"),
+                    title: Text("Hydrotherapy"),
                     onChanged: (value) {
                       setState(() {});
                     },
@@ -712,7 +712,7 @@ class _BasicInfo extends State<BasicInformation> {
                   ),
                   CheckboxListTile(
                     value: false,
-                    title: Text("Hypoallergenic rooms"),
+                    title: Text("Body Treatments"),
                     onChanged: (value) {
                       setState(() {});
                     },
@@ -722,7 +722,7 @@ class _BasicInfo extends State<BasicInformation> {
                   ),
                   CheckboxListTile(
                     value: false,
-                    title: Text("Doctor on site"),
+                    title: Text("Turkish Baths/Hammam"),
                     onChanged: (value) {
                       setState(() {});
                     },
@@ -732,7 +732,7 @@ class _BasicInfo extends State<BasicInformation> {
                   ),
                   CheckboxListTile(
                     value: false,
-                    title: Text("Concierge"),
+                    title: Text("Hot Stone Massage"),
                     onChanged: (value) {
                       setState(() {});
                     },
@@ -740,47 +740,6 @@ class _BasicInfo extends State<BasicInformation> {
                   Divider(
                     height: 10,
                   ),
-                  CheckboxListTile(
-                    value: false,
-                    title: Text("Free Wi-Fi"),
-                    onChanged: (value) {
-                      setState(() {});
-                    },
-                  ),
-                  Divider(
-                    height: 10,
-                  ),
-                  CheckboxListTile(
-                    value: false,
-                    title: Text("Free parking"),
-                    onChanged: (value) {
-                      setState(() {});
-                    },
-                  ),
-                  Divider(
-                    height: 10,
-                  ),
-                  CheckboxListTile(
-                    value: false,
-                    title: Text("Airport shuttle"),
-                    onChanged: (value) {
-                      setState(() {});
-                    },
-                  ),
-                  Divider(
-                    height: 10,
-                  ),
-                  CheckboxListTile(
-                    value: false,
-                    title: Text("ATM"),
-                    onChanged: (value) {
-                      setState(() {});
-                    },
-                  ),
-                  Divider(
-                    height: 10,
-                  ),
-
                   SizedBox(
                     height: 5,
                   ),
@@ -838,6 +797,282 @@ class _BasicInfo extends State<BasicInformation> {
       //  },
     );
   }
+
+// ignore: unused_element
+void _showDialogFoodAndBeverage() {
+    showDialog(
+      context: context,
+      barrierDismissible: false,
+      builder: (context) {
+        //  return StatefulBuilder(
+        // StatefulBuilder
+        // builder: (context, setState) {
+        return AlertDialog(
+          contentPadding: EdgeInsets.only(left: 25, right: 25),
+          title: Center(child: Text("Facilities and Services")),
+          shape: RoundedRectangleBorder(
+              borderRadius: BorderRadius.all(Radius.circular(20.0))),
+          //   actions: <Widget>[
+          content: Container(
+            width: 400,
+            child: SingleChildScrollView(
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.center,
+                children: <Widget>[
+                  Text(
+                    "Health and Wellness",
+                    style: TextStyle(fontSize: 20),
+                  ),
+                  SizedBox(
+                    height: 5,
+                  ),
+                  Container(
+                    height: 2,
+                    color: Colors.black,
+                  ),
+                  SizedBox(
+                    height: 15,
+                  ),
+                  CheckboxListTile(
+                    value: false,
+                    title: Text("Beauty Salon"),
+                    onChanged: (value) {
+                      setState(() {});
+                    },
+                  ),
+                  Divider(
+                    height: 10,
+                  ),
+                  CheckboxListTile(
+                    value: false,
+                    title: Text("Steam Room"),
+                    onChanged: (value) {
+                      setState(() {});
+                    },
+                  ),
+                  Divider(
+                    height: 10,
+                  ),
+                  CheckboxListTile(
+                    value: false,
+                    title: Text("Gym"),
+                    onChanged: (value) {
+                      setState(() {});
+                    },
+                  ),
+                  Divider(
+                    height: 10,
+                  ),
+                  CheckboxListTile(
+                    value: false,
+                    title: Text("Hairdresser"),
+                    onChanged: (value) {
+                      setState(() {});
+                    },
+                  ),
+                  Divider(
+                    height: 10,
+                  ),
+                  CheckboxListTile(
+                    value: false,
+                    title: Text("Outdoor Swimming Pool"),
+                    onChanged: (value) {
+                      setState(() {});
+                    },
+                  ),
+                  Divider(
+                    height: 10,
+                  ),
+                  CheckboxListTile(
+                    value: false,
+                    title: Text("Indoor Swimming Pool"),
+                    onChanged: (value) {
+                      setState(() {});
+                    },
+                  ),
+                  Divider(
+                    height: 10,
+                  ),
+                  CheckboxListTile(
+                    value: false,
+                    title: Text("Massage"),
+                    onChanged: (value) {
+                      setState(() {});
+                    },
+                  ),
+                  Divider(
+                    height: 10,
+                  ),
+                  CheckboxListTile(
+                    value: false,
+                    title: Text("Sauna"),
+                    onChanged: (value) {
+                      setState(() {});
+                    },
+                  ),
+                  Divider(
+                    height: 10,
+                  ),
+                  CheckboxListTile(
+                    value: false,
+                    title: Text("Solarium"),
+                    onChanged: (value) {
+                      setState(() {});
+                    },
+                  ),
+                  Divider(
+                    height: 10,
+                  ),
+                  CheckboxListTile(
+                    value: false,
+                    title: Text("Direct Beach Access"),
+                    onChanged: (value) {
+                      setState(() {});
+                    },
+                  ),
+                  Divider(
+                    height: 10,
+                  ),
+                  CheckboxListTile(
+                    value: false,
+                    title: Text("Beach/Sun Umbrellas"),
+                    onChanged: (value) {
+                      setState(() {});
+                    },
+                  ),
+                  Divider(
+                    height: 10,
+                  ),
+                  CheckboxListTile(
+                    value: false,
+                    title: Text("Towels at the pool/beach"),
+                    onChanged: (value) {
+                      setState(() {});
+                    },
+                  ),
+                  Divider(
+                    height: 10,
+                  ),
+                  CheckboxListTile(
+                    value: false,
+                    title: Text("Wellness center/Spa"),
+                    onChanged: (value) {
+                      setState(() {});
+                    },
+                  ),
+                  Divider(
+                    height: 10,
+                  ),
+                  CheckboxListTile(
+                    value: false,
+                    title: Text("Whirlpool/Hot tub"),
+                    onChanged: (value) {
+                      setState(() {});
+                    },
+                  ),
+                  Divider(
+                    height: 10,
+                  ),
+                  CheckboxListTile(
+                    value: false,
+                    title: Text("Hydrotherapy"),
+                    onChanged: (value) {
+                      setState(() {});
+                    },
+                  ),
+                  Divider(
+                    height: 10,
+                  ),
+                  CheckboxListTile(
+                    value: false,
+                    title: Text("Body Treatments"),
+                    onChanged: (value) {
+                      setState(() {});
+                    },
+                  ),
+                  Divider(
+                    height: 10,
+                  ),
+                  CheckboxListTile(
+                    value: false,
+                    title: Text("Turkish Baths/Hammam"),
+                    onChanged: (value) {
+                      setState(() {});
+                    },
+                  ),
+                  Divider(
+                    height: 10,
+                  ),
+                  CheckboxListTile(
+                    value: false,
+                    title: Text("Hot Stone Massage"),
+                    onChanged: (value) {
+                      setState(() {});
+                    },
+                  ),
+                  Divider(
+                    height: 10,
+                  ),
+                  SizedBox(
+                    height: 5,
+                  ),
+                  // actions: <Widget>[
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                    children: <Widget>[
+                      Material(
+                        elevation: 5.0,
+                        color: Colors.blue[900],
+                        child: MaterialButton(
+                          padding: EdgeInsets.fromLTRB(10.0, 5.0, 10.0, 5.0),
+                          onPressed: () {},
+                          child: Text("Save",
+                              textAlign: TextAlign.center,
+                              style: TextStyle(
+                                color: Colors.white,
+                                fontSize: 15,
+                              )),
+                        ),
+                      ),
+                      Material(
+                        elevation: 5.0,
+                        color: Colors.blue[900],
+                        child: MaterialButton(
+                          padding: EdgeInsets.fromLTRB(10.0, 5.0, 10.0, 5.0),
+                          onPressed: () {
+                            setState(() {
+                              Navigator.of(context).pop();
+                            });
+                          },
+                          child: Text("Cancel",
+                              textAlign: TextAlign.center,
+                              style: TextStyle(
+                                color: Colors.white,
+                                fontSize: 15,
+                              )),
+                        ),
+                      ),
+                      
+                    ],
+                  ),
+                  Divider(
+                    height: 10,
+                  ),
+                ],
+                // ],
+              ),
+            ),
+          ),
+          //   ],
+        );
+      },
+      // );
+      //  },
+    );
+  }
+
+
+  
   
 }
 
