@@ -3,34 +3,35 @@ import 'dart:async';
 // ignore: avoid_web_libraries_in_flutter
 //import 'dart:html';
 import 'package:cloud_firestore/cloud_firestore.dart';
-import 'package:e_shop/Counters/BookQuantity.dart';
-import 'package:e_shop/testhomepage.dart';
+// import 'package:e_shop/Counters/BookQuantity.dart';
+// import 'package:e_shop/testhomepage.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:provider/provider.dart';
+// import 'package:provider/provider.dart';
 import 'package:shared_preferences/shared_preferences.dart';
-import 'Admin/AddVendor.dart';
-import 'Admin/adminDashboard.dart';
-import 'Admin/adminLogin.dart';
-import 'Authentication/LoginPageOtp.dart';
-import 'Authentication/TESTOTP.dart';
-import 'Authentication/authenication.dart';
+// import 'Admin/AddVendor.dart';
+// import 'Admin/adminDashboard.dart';
+// import 'Admin/adminLogin.dart';
+// import 'Authentication/LoginPageOtp.dart';
+// import 'Authentication/TESTOTP.dart';
+// import 'Authentication/authenication.dart';
 import 'package:e_shop/Config/config.dart';
-import 'Authentication/registerCreated.dart';
-import 'Authentication/homeActivity.dart';
-import 'Authentication/otpPage.dart';
-import 'Authentication/register.dart';
-import 'Counters/cartitemcounter.dart';
-import 'Counters/changeAddresss.dart';
-import 'Counters/totalMoney.dart';
-import 'Store/storehome.dart';
-import 'package:animated_splash_screen/animated_splash_screen.dart';
+// import 'Authentication/registerCreated.dart';
+// import 'Authentication/homeActivity.dart';
+// import 'Authentication/otpPage.dart';
+// import 'Authentication/register.dart';
+// import 'Counters/cartitemcounter.dart';
+// import 'Counters/changeAddresss.dart';
+// import 'Counters/totalMoney.dart';
+// import 'Store/storehome.dart';
+// import 'package:animated_splash_screen/animated_splash_screen.dart';
 
-import 'Vendors/PropertyDetailForm.dart';
-import 'Vendors/VendorDashBoard.dart';
+// import 'Vendors/BasicInformation.dart';
+// import 'Vendors/PropertyDetailForm.dart';
+// import 'Vendors/VendorDashBoard.dart';
 import 'Vendors/vendor_login.dart';
-import 'Widgets/hotelBookingForm.dart';
+// import 'Widgets/hotelBookingForm.dart';
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -49,7 +50,7 @@ class MyApp extends StatelessWidget {
         title: 'e-Shop',
         debugShowCheckedModeBanner: false,
         theme: ThemeData(
-          primaryColor: Colors.green,
+          primaryColor: Colors.red,
         ),
         home: SplashScreen()
         /* home: AnimatedSplashScreen(
@@ -82,7 +83,7 @@ class _SplashScreenState extends State<SplashScreen> {
       //   Route route = MaterialPageRoute(builder: (_) => StoreHome());
       //   Navigator.pushReplacement(context, route);
       // } else {
-      Route route = MaterialPageRoute(builder: (_) => AdminSignInPage());
+      Route route = MaterialPageRoute(builder: (_) => VendorSignInPage());
       Navigator.pushReplacement(context, route);
     }
         // }

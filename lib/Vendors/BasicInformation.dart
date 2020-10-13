@@ -51,14 +51,14 @@ class _BasicInfo extends State<BasicInformation> {
               key: _vendorFormKey,
               child: Column(
                 children: [
-                  CustomTextField(
-                    controller: hotelName,
-                    hintText: "Enter the Property Name",
-                    isObsecure: false,
-                  ),
+                  // CustomTextField(
+                  //   controller: hotelName,
+                  //   hintText: "Enter the Property Name",
+                  //   isObsecure: false,
+                  // ),
                   CustomTextField(
                     controller: hotelChainName,
-                    hintText: "Enter the Hotel Chain Name",
+                    hintText: "Enter the Hotel Chain Name (if any)",
                     isObsecure: false,
                   ),
                   DropdownButton<String>(
@@ -179,7 +179,33 @@ class _BasicInfo extends State<BasicInformation> {
                   ),
                   RaisedButton(
                     onPressed: _showDialogHealthAndWellness,
-                    child: Text('Facilities & Services',
+                    child: Text('Health and Wellness',
+                        style: TextStyle(fontSize: 20)),
+                  ),
+                  RaisedButton(
+                    onPressed: _showDialogFoodAndBeverage,
+                    child:
+                        Text('Food & Beverage', style: TextStyle(fontSize: 20)),
+                  ),
+                  RaisedButton(
+                    onPressed: _showDialogRoomAmenities,
+                    child:
+                        Text('Room amenities', style: TextStyle(fontSize: 20)),
+                  ),
+                  //_showDialogFamilyFriendlyFeatures
+                  RaisedButton(
+                    onPressed: _showDialogAccessibility,
+                    child:
+                        Text('Accessibility', style: TextStyle(fontSize: 20)),
+                  ),
+                  RaisedButton(
+                    onPressed: _showDialogPaymentMethods,
+                    child:
+                        Text('Payment Methods', style: TextStyle(fontSize: 20)),
+                  ),
+                  RaisedButton(
+                    onPressed: _showDialogFamilyFriendlyFeatures,
+                    child: Text('Family-Friendly features',
                         style: TextStyle(fontSize: 20)),
                   ),
                 ],
@@ -234,7 +260,7 @@ class _BasicInfo extends State<BasicInformation> {
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: <Widget>[
                   Text(
-                    "Facilities and Services",
+                    "Choose the amenities",
                     style: TextStyle(fontSize: 20),
                   ),
                   SizedBox(
@@ -507,7 +533,6 @@ class _BasicInfo extends State<BasicInformation> {
                               )),
                         ),
                       ),
-                      
                     ],
                   ),
                   Divider(
@@ -536,7 +561,7 @@ class _BasicInfo extends State<BasicInformation> {
         // builder: (context, setState) {
         return AlertDialog(
           contentPadding: EdgeInsets.only(left: 25, right: 25),
-          title: Center(child: Text("Facilities and Services")),
+          title: Center(child: Text("Health and Wellness")),
           shape: RoundedRectangleBorder(
               borderRadius: BorderRadius.all(Radius.circular(20.0))),
           //   actions: <Widget>[
@@ -547,7 +572,7 @@ class _BasicInfo extends State<BasicInformation> {
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: <Widget>[
                   Text(
-                    "Health and Wellness",
+                    "Choose the amenities",
                     style: TextStyle(fontSize: 20),
                   ),
                   SizedBox(
@@ -779,7 +804,277 @@ class _BasicInfo extends State<BasicInformation> {
                               )),
                         ),
                       ),
-                      
+                    ],
+                  ),
+                  Divider(
+                    height: 10,
+                  ),
+                ],
+                // ],
+              ),
+            ),
+          ),
+          //   ],
+        );
+      },
+      // );
+      //  },
+    );
+  }
+
+  void _showDialogRoomAmenities() {
+    showDialog(
+      context: context,
+      barrierDismissible: false,
+      builder: (context) {
+        //  return StatefulBuilder(
+        // StatefulBuilder
+        // builder: (context, setState) {
+        return AlertDialog(
+          contentPadding: EdgeInsets.only(left: 25, right: 25),
+          title: Center(child: Text("Room amenities")),
+          shape: RoundedRectangleBorder(
+              borderRadius: BorderRadius.all(Radius.circular(20.0))),
+          //   actions: <Widget>[
+          content: Container(
+            width: 400,
+            child: SingleChildScrollView(
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.center,
+                children: <Widget>[
+                  Text(
+                    "Choose the amenities",
+                    style: TextStyle(fontSize: 20),
+                  ),
+                  SizedBox(
+                    height: 5,
+                  ),
+                  Container(
+                    height: 2,
+                    color: Colors.black,
+                  ),
+                  SizedBox(
+                    height: 15,
+                  ),
+                  CheckboxListTile(
+                    value: false,
+                    title: Text("Balcony/Patio"),
+                    onChanged: (value) {
+                      setState(() {});
+                    },
+                  ),
+                  Divider(
+                    height: 10,
+                  ),
+                  CheckboxListTile(
+                    value: false,
+                    title: Text("Bathroom with bathtub"),
+                    onChanged: (value) {
+                      setState(() {});
+                    },
+                  ),
+                  Divider(
+                    height: 10,
+                  ),
+                  CheckboxListTile(
+                    value: false,
+                    title: Text("TV"),
+                    onChanged: (value) {
+                      setState(() {});
+                    },
+                  ),
+                  Divider(
+                    height: 10,
+                  ),
+                  CheckboxListTile(
+                    value: false,
+                    title: Text("Bathroom with shower"),
+                    onChanged: (value) {
+                      setState(() {});
+                    },
+                  ),
+                  Divider(
+                    height: 10,
+                  ),
+                  CheckboxListTile(
+                    value: false,
+                    title: Text("Hairdryer"),
+                    onChanged: (value) {
+                      setState(() {});
+                    },
+                  ),
+                  Divider(
+                    height: 10,
+                  ),
+                  CheckboxListTile(
+                    value: false,
+                    title: Text("Central heating"),
+                    onChanged: (value) {
+                      setState(() {});
+                    },
+                  ),
+                  Divider(
+                    height: 10,
+                  ),
+                  CheckboxListTile(
+                    value: false,
+                    title: Text("AC"),
+                    onChanged: (value) {
+                      setState(() {});
+                    },
+                  ),
+                  Divider(
+                    height: 10,
+                  ),
+                  CheckboxListTile(
+                    value: false,
+                    title: Text("Cosmetic mirror"),
+                    onChanged: (value) {
+                      setState(() {});
+                    },
+                  ),
+                  Divider(
+                    height: 10,
+                  ),
+                  CheckboxListTile(
+                    value: false,
+                    title: Text("Satellite TV"),
+                    onChanged: (value) {
+                      setState(() {});
+                    },
+                  ),
+                  Divider(
+                    height: 10,
+                  ),
+                  CheckboxListTile(
+                    value: false,
+                    title: Text("Desk"),
+                    onChanged: (value) {
+                      setState(() {});
+                    },
+                  ),
+                  Divider(
+                    height: 10,
+                  ),
+                  CheckboxListTile(
+                    value: false,
+                    title: Text("Telephone"),
+                    onChanged: (value) {
+                      setState(() {});
+                    },
+                  ),
+                  Divider(
+                    height: 10,
+                  ),
+                  CheckboxListTile(
+                    value: false,
+                    title: Text("Cable TV"),
+                    onChanged: (value) {
+                      setState(() {});
+                    },
+                  ),
+                  Divider(
+                    height: 10,
+                  ),
+                  CheckboxListTile(
+                    value: false,
+                    title: Text("Self catering"),
+                    onChanged: (value) {
+                      setState(() {});
+                    },
+                  ),
+                  Divider(
+                    height: 10,
+                  ),
+                  CheckboxListTile(
+                    value: false,
+                    title: Text("Microwave"),
+                    onChanged: (value) {
+                      setState(() {});
+                    },
+                  ),
+                  Divider(
+                    height: 10,
+                  ),
+                  CheckboxListTile(
+                    value: false,
+                    title: Text("Refrigerator"),
+                    onChanged: (value) {
+                      setState(() {});
+                    },
+                  ),
+                  Divider(
+                    height: 10,
+                  ),
+                  CheckboxListTile(
+                    value: false,
+                    title: Text("Fan"),
+                    onChanged: (value) {
+                      setState(() {});
+                    },
+                  ),
+                  Divider(
+                    height: 10,
+                  ),
+                  CheckboxListTile(
+                    value: false,
+                    title: Text("Free Wi-Fi"),
+                    onChanged: (value) {
+                      setState(() {});
+                    },
+                  ),
+                  Divider(
+                    height: 10,
+                  ),
+                  CheckboxListTile(
+                    value: false,
+                    title: Text("Hypoallergenic  bedding"),
+                    onChanged: (value) {
+                      setState(() {});
+                    },
+                  ),
+                  Divider(
+                    height: 10,
+                  ),
+                  SizedBox(
+                    height: 5,
+                  ),
+                  // actions: <Widget>[
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                    children: <Widget>[
+                      Material(
+                        elevation: 5.0,
+                        color: Colors.blue[900],
+                        child: MaterialButton(
+                          padding: EdgeInsets.fromLTRB(10.0, 5.0, 10.0, 5.0),
+                          onPressed: () {},
+                          child: Text("Save",
+                              textAlign: TextAlign.center,
+                              style: TextStyle(
+                                color: Colors.white,
+                                fontSize: 15,
+                              )),
+                        ),
+                      ),
+                      Material(
+                        elevation: 5.0,
+                        color: Colors.blue[900],
+                        child: MaterialButton(
+                          padding: EdgeInsets.fromLTRB(10.0, 5.0, 10.0, 5.0),
+                          onPressed: () {
+                            setState(() {
+                              Navigator.of(context).pop();
+                            });
+                          },
+                          child: Text("Cancel",
+                              textAlign: TextAlign.center,
+                              style: TextStyle(
+                                color: Colors.white,
+                                fontSize: 15,
+                              )),
+                        ),
+                      ),
                     ],
                   ),
                   Divider(
@@ -799,7 +1094,7 @@ class _BasicInfo extends State<BasicInformation> {
   }
 
 // ignore: unused_element
-void _showDialogFoodAndBeverage() {
+  void _showDialogFoodAndBeverage() {
     showDialog(
       context: context,
       barrierDismissible: false,
@@ -809,7 +1104,7 @@ void _showDialogFoodAndBeverage() {
         // builder: (context, setState) {
         return AlertDialog(
           contentPadding: EdgeInsets.only(left: 25, right: 25),
-          title: Center(child: Text("Facilities and Services")),
+          title: Center(child: Text("Food and Beverage")),
           shape: RoundedRectangleBorder(
               borderRadius: BorderRadius.all(Radius.circular(20.0))),
           //   actions: <Widget>[
@@ -820,7 +1115,7 @@ void _showDialogFoodAndBeverage() {
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: <Widget>[
                   Text(
-                    "Health and Wellness",
+                    "Choose the amenities",
                     style: TextStyle(fontSize: 20),
                   ),
                   SizedBox(
@@ -835,7 +1130,7 @@ void _showDialogFoodAndBeverage() {
                   ),
                   CheckboxListTile(
                     value: false,
-                    title: Text("Beauty Salon"),
+                    title: Text("Hotel Bar"),
                     onChanged: (value) {
                       setState(() {});
                     },
@@ -845,7 +1140,7 @@ void _showDialogFoodAndBeverage() {
                   ),
                   CheckboxListTile(
                     value: false,
-                    title: Text("Steam Room"),
+                    title: Text("Pool Bar"),
                     onChanged: (value) {
                       setState(() {});
                     },
@@ -855,7 +1150,7 @@ void _showDialogFoodAndBeverage() {
                   ),
                   CheckboxListTile(
                     value: false,
-                    title: Text("Gym"),
+                    title: Text("Restaurant"),
                     onChanged: (value) {
                       setState(() {});
                     },
@@ -865,7 +1160,7 @@ void _showDialogFoodAndBeverage() {
                   ),
                   CheckboxListTile(
                     value: false,
-                    title: Text("Hairdresser"),
+                    title: Text("Serves Halal Food"),
                     onChanged: (value) {
                       setState(() {});
                     },
@@ -875,7 +1170,7 @@ void _showDialogFoodAndBeverage() {
                   ),
                   CheckboxListTile(
                     value: false,
-                    title: Text("Outdoor Swimming Pool"),
+                    title: Text("Serves Kosher Food"),
                     onChanged: (value) {
                       setState(() {});
                     },
@@ -883,139 +1178,7 @@ void _showDialogFoodAndBeverage() {
                   Divider(
                     height: 10,
                   ),
-                  CheckboxListTile(
-                    value: false,
-                    title: Text("Indoor Swimming Pool"),
-                    onChanged: (value) {
-                      setState(() {});
-                    },
-                  ),
-                  Divider(
-                    height: 10,
-                  ),
-                  CheckboxListTile(
-                    value: false,
-                    title: Text("Massage"),
-                    onChanged: (value) {
-                      setState(() {});
-                    },
-                  ),
-                  Divider(
-                    height: 10,
-                  ),
-                  CheckboxListTile(
-                    value: false,
-                    title: Text("Sauna"),
-                    onChanged: (value) {
-                      setState(() {});
-                    },
-                  ),
-                  Divider(
-                    height: 10,
-                  ),
-                  CheckboxListTile(
-                    value: false,
-                    title: Text("Solarium"),
-                    onChanged: (value) {
-                      setState(() {});
-                    },
-                  ),
-                  Divider(
-                    height: 10,
-                  ),
-                  CheckboxListTile(
-                    value: false,
-                    title: Text("Direct Beach Access"),
-                    onChanged: (value) {
-                      setState(() {});
-                    },
-                  ),
-                  Divider(
-                    height: 10,
-                  ),
-                  CheckboxListTile(
-                    value: false,
-                    title: Text("Beach/Sun Umbrellas"),
-                    onChanged: (value) {
-                      setState(() {});
-                    },
-                  ),
-                  Divider(
-                    height: 10,
-                  ),
-                  CheckboxListTile(
-                    value: false,
-                    title: Text("Towels at the pool/beach"),
-                    onChanged: (value) {
-                      setState(() {});
-                    },
-                  ),
-                  Divider(
-                    height: 10,
-                  ),
-                  CheckboxListTile(
-                    value: false,
-                    title: Text("Wellness center/Spa"),
-                    onChanged: (value) {
-                      setState(() {});
-                    },
-                  ),
-                  Divider(
-                    height: 10,
-                  ),
-                  CheckboxListTile(
-                    value: false,
-                    title: Text("Whirlpool/Hot tub"),
-                    onChanged: (value) {
-                      setState(() {});
-                    },
-                  ),
-                  Divider(
-                    height: 10,
-                  ),
-                  CheckboxListTile(
-                    value: false,
-                    title: Text("Hydrotherapy"),
-                    onChanged: (value) {
-                      setState(() {});
-                    },
-                  ),
-                  Divider(
-                    height: 10,
-                  ),
-                  CheckboxListTile(
-                    value: false,
-                    title: Text("Body Treatments"),
-                    onChanged: (value) {
-                      setState(() {});
-                    },
-                  ),
-                  Divider(
-                    height: 10,
-                  ),
-                  CheckboxListTile(
-                    value: false,
-                    title: Text("Turkish Baths/Hammam"),
-                    onChanged: (value) {
-                      setState(() {});
-                    },
-                  ),
-                  Divider(
-                    height: 10,
-                  ),
-                  CheckboxListTile(
-                    value: false,
-                    title: Text("Hot Stone Massage"),
-                    onChanged: (value) {
-                      setState(() {});
-                    },
-                  ),
-                  Divider(
-                    height: 10,
-                  ),
-                  SizedBox(
-                    height: 5,
-                  ),
+
                   // actions: <Widget>[
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
@@ -1052,7 +1215,6 @@ void _showDialogFoodAndBeverage() {
                               )),
                         ),
                       ),
-                      
                     ],
                   ),
                   Divider(
@@ -1071,8 +1233,500 @@ void _showDialogFoodAndBeverage() {
     );
   }
 
+  void _showDialogAccessibility() {
+    showDialog(
+      context: context,
+      barrierDismissible: false,
+      builder: (context) {
+        //  return StatefulBuilder(
+        // StatefulBuilder
+        // builder: (context, setState) {
+        return AlertDialog(
+          contentPadding: EdgeInsets.only(left: 25, right: 25),
+          title: Center(child: Text("Accessibilty")),
+          shape: RoundedRectangleBorder(
+              borderRadius: BorderRadius.all(Radius.circular(20.0))),
+          //   actions: <Widget>[
+          content: Container(
+            width: 400,
+            child: SingleChildScrollView(
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.center,
+                children: <Widget>[
+                  Text(
+                    "Choose the amenities",
+                    style: TextStyle(fontSize: 20),
+                  ),
+                  SizedBox(
+                    height: 5,
+                  ),
+                  Container(
+                    height: 2,
+                    color: Colors.black,
+                  ),
+                  SizedBox(
+                    height: 15,
+                  ),
+                  CheckboxListTile(
+                    value: false,
+                    title: Text("Accessible paths/hallways"),
+                    onChanged: (value) {
+                      setState(() {});
+                    },
+                  ),
+                  Divider(
+                    height: 10,
+                  ),
+                  CheckboxListTile(
+                    value: false,
+                    title: Text("Accessible bathroom facilities"),
+                    onChanged: (value) {
+                      setState(() {});
+                    },
+                  ),
+                  Divider(
+                    height: 10,
+                  ),
+                  CheckboxListTile(
+                    value: false,
+                    title: Text("Accessible parking"),
+                    onChanged: (value) {
+                      setState(() {});
+                    },
+                  ),
+                  Divider(
+                    height: 10,
+                  ),
+                  CheckboxListTile(
+                    value: false,
+                    title: Text("in room accessibility"),
+                    onChanged: (value) {
+                      setState(() {});
+                    },
+                  ),
+                  Divider(
+                    height: 10,
+                  ),
+                  CheckboxListTile(
+                    value: false,
+                    title: Text("Deaf accessibility equipment"),
+                    onChanged: (value) {
+                      setState(() {});
+                    },
+                  ),
+                  Divider(
+                    height: 10,
+                  ),
 
-  
-  
+                  // actions: <Widget>[
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                    children: <Widget>[
+                      Material(
+                        elevation: 5.0,
+                        color: Colors.blue[900],
+                        child: MaterialButton(
+                          padding: EdgeInsets.fromLTRB(10.0, 5.0, 10.0, 5.0),
+                          onPressed: () {},
+                          child: Text("Save",
+                              textAlign: TextAlign.center,
+                              style: TextStyle(
+                                color: Colors.white,
+                                fontSize: 15,
+                              )),
+                        ),
+                      ),
+                      Material(
+                        elevation: 5.0,
+                        color: Colors.blue[900],
+                        child: MaterialButton(
+                          padding: EdgeInsets.fromLTRB(10.0, 5.0, 10.0, 5.0),
+                          onPressed: () {
+                            setState(() {
+                              Navigator.of(context).pop();
+                            });
+                          },
+                          child: Text("Cancel",
+                              textAlign: TextAlign.center,
+                              style: TextStyle(
+                                color: Colors.white,
+                                fontSize: 15,
+                              )),
+                        ),
+                      ),
+                    ],
+                  ),
+                  Divider(
+                    height: 10,
+                  ),
+                ],
+                // ],
+              ),
+            ),
+          ),
+          //   ],
+        );
+      },
+      // );
+      //  },
+    );
+  }
+
+  void _showDialogPaymentMethods() {
+    showDialog(
+      context: context,
+      barrierDismissible: false,
+      builder: (context) {
+        //  return StatefulBuilder(
+        // StatefulBuilder
+        // builder: (context, setState) {
+        return AlertDialog(
+          contentPadding: EdgeInsets.only(left: 25, right: 25),
+          title: Center(child: Text("Payment methods")),
+          shape: RoundedRectangleBorder(
+              borderRadius: BorderRadius.all(Radius.circular(20.0))),
+          //   actions: <Widget>[
+          content: Container(
+            width: 400,
+            child: SingleChildScrollView(
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.center,
+                children: <Widget>[
+                  Text(
+                    "Choose the methods",
+                    style: TextStyle(fontSize: 20),
+                  ),
+                  SizedBox(
+                    height: 5,
+                  ),
+                  Container(
+                    height: 2,
+                    color: Colors.black,
+                  ),
+                  SizedBox(
+                    height: 15,
+                  ),
+                  CheckboxListTile(
+                    value: false,
+                    title: Text("Cash"),
+                    onChanged: (value) {
+                      setState(() {});
+                    },
+                  ),
+                  Divider(
+                    height: 10,
+                  ),
+                  CheckboxListTile(
+                    value: false,
+                    title: Text("Check"),
+                    onChanged: (value) {
+                      setState(() {});
+                    },
+                  ),
+                  Divider(
+                    height: 10,
+                  ),
+                  CheckboxListTile(
+                    value: false,
+                    title: Text("Cheque"),
+                    onChanged: (value) {
+                      setState(() {});
+                    },
+                  ),
+                  Divider(
+                    height: 10,
+                  ),
+                  CheckboxListTile(
+                    value: false,
+                    title: Text("Billing to corporate accounts"),
+                    onChanged: (value) {
+                      setState(() {});
+                    },
+                  ),
+                  Divider(
+                    height: 10,
+                  ),
+                  CheckboxListTile(
+                    value: false,
+                    title: Text("EC/Maestro/Debit card"),
+                    onChanged: (value) {
+                      setState(() {});
+                    },
+                  ),
+                  Divider(
+                    height: 10,
+                  ),
+                  CheckboxListTile(
+                    value: false,
+                    title: Text("American Express"),
+                    onChanged: (value) {
+                      setState(() {});
+                    },
+                  ),
+                  Divider(
+                    height: 10,
+                  ),
+                  CheckboxListTile(
+                    value: false,
+                    title: Text("Diners club"),
+                    onChanged: (value) {
+                      setState(() {});
+                    },
+                  ),
+                  Divider(
+                    height: 10,
+                  ),
+                  CheckboxListTile(
+                    value: false,
+                    title: Text("Master card"),
+                    onChanged: (value) {
+                      setState(() {});
+                    },
+                  ),
+                  Divider(
+                    height: 10,
+                  ),
+                  CheckboxListTile(
+                    value: false,
+                    title: Text("JCB"),
+                    onChanged: (value) {
+                      setState(() {});
+                    },
+                  ),
+                  Divider(
+                    height: 10,
+                  ),
+                  CheckboxListTile(
+                    value: false,
+                    title: Text("Internet Banking"),
+                    onChanged: (value) {
+                      setState(() {});
+                    },
+                  ),
+                  Divider(
+                    height: 10,
+                  ),
+                  CheckboxListTile(
+                    value: false,
+                    title: Text("Visa"),
+                    onChanged: (value) {
+                      setState(() {});
+                    },
+                  ),
+                  Divider(
+                    height: 10,
+                  ),
+                  CheckboxListTile(
+                    value: false,
+                    title: Text("Traveler's cheques"),
+                    onChanged: (value) {
+                      setState(() {});
+                    },
+                  ),
+                  Divider(
+                    height: 10,
+                  ),
+                  CheckboxListTile(
+                    value: false,
+                    title: Text("SZEP cards"),
+                    onChanged: (value) {
+                      setState(() {});
+                    },
+                  ),
+                  Divider(
+                    height: 10,
+                  ),
+
+                  // actions: <Widget>[
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                    children: <Widget>[
+                      Material(
+                        elevation: 5.0,
+                        color: Colors.blue[900],
+                        child: MaterialButton(
+                          padding: EdgeInsets.fromLTRB(10.0, 5.0, 10.0, 5.0),
+                          onPressed: () {},
+                          child: Text("Save",
+                              textAlign: TextAlign.center,
+                              style: TextStyle(
+                                color: Colors.white,
+                                fontSize: 15,
+                              )),
+                        ),
+                      ),
+                      Material(
+                        elevation: 5.0,
+                        color: Colors.blue[900],
+                        child: MaterialButton(
+                          padding: EdgeInsets.fromLTRB(10.0, 5.0, 10.0, 5.0),
+                          onPressed: () {
+                            setState(() {
+                              Navigator.of(context).pop();
+                            });
+                          },
+                          child: Text("Cancel",
+                              textAlign: TextAlign.center,
+                              style: TextStyle(
+                                color: Colors.white,
+                                fontSize: 15,
+                              )),
+                        ),
+                      ),
+                    ],
+                  ),
+                  Divider(
+                    height: 10,
+                  ),
+                ],
+                // ],
+              ),
+            ),
+          ),
+          //   ],
+        );
+      },
+      // );
+      //  },
+    );
+  }
+
+  void _showDialogFamilyFriendlyFeatures() {
+    showDialog(
+      context: context,
+      barrierDismissible: false,
+      builder: (context) {
+        //  return StatefulBuilder(
+        // StatefulBuilder
+        // builder: (context, setState) {
+        return AlertDialog(
+          contentPadding: EdgeInsets.only(left: 25, right: 25),
+          title: Center(child: Text("Accessibilty")),
+          shape: RoundedRectangleBorder(
+              borderRadius: BorderRadius.all(Radius.circular(20.0))),
+          //   actions: <Widget>[
+          content: Container(
+            width: 400,
+            child: SingleChildScrollView(
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.center,
+                children: <Widget>[
+                  Text(
+                    "Choose the amenities",
+                    style: TextStyle(fontSize: 20),
+                  ),
+                  SizedBox(
+                    height: 5,
+                  ),
+                  Container(
+                    height: 2,
+                    color: Colors.black,
+                  ),
+                  SizedBox(
+                    height: 15,
+                  ),
+                  CheckboxListTile(
+                    value: false,
+                    title: Text("Child/Baby crib"),
+                    onChanged: (value) {
+                      setState(() {});
+                    },
+                  ),
+                  Divider(
+                    height: 10,
+                  ),
+                  CheckboxListTile(
+                    value: false,
+                    title: Text("Children/babysitting"),
+                    onChanged: (value) {
+                      setState(() {});
+                    },
+                  ),
+                  Divider(
+                    height: 10,
+                  ),
+                  CheckboxListTile(
+                    value: false,
+                    title: Text("Kid's Playground"),
+                    onChanged: (value) {
+                      setState(() {});
+                    },
+                  ),
+                  Divider(
+                    height: 10,
+                  ),
+                  CheckboxListTile(
+                    value: false,
+                    title: Text("Kid's clubs"),
+                    onChanged: (value) {
+                      setState(() {});
+                    },
+                  ),
+                  Divider(
+                    height: 10,
+                  ),
+                  CheckboxListTile(
+                    value: false,
+                    title: Text("Organized activities for kids"),
+                    onChanged: (value) {
+                      setState(() {});
+                    },
+                  ),
+                  Divider(
+                    height: 10,
+                  ),
+
+                  // actions: <Widget>[
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                    children: <Widget>[
+                      Material(
+                        elevation: 5.0,
+                        color: Colors.blue[900],
+                        child: MaterialButton(
+                          padding: EdgeInsets.fromLTRB(10.0, 5.0, 10.0, 5.0),
+                          onPressed: () {},
+                          child: Text("Save",
+                              textAlign: TextAlign.center,
+                              style: TextStyle(
+                                color: Colors.white,
+                                fontSize: 15,
+                              )),
+                        ),
+                      ),
+                      Material(
+                        elevation: 5.0,
+                        color: Colors.blue[900],
+                        child: MaterialButton(
+                          padding: EdgeInsets.fromLTRB(10.0, 5.0, 10.0, 5.0),
+                          onPressed: () {
+                            setState(() {
+                              Navigator.of(context).pop();
+                            });
+                          },
+                          child: Text("Cancel",
+                              textAlign: TextAlign.center,
+                              style: TextStyle(
+                                color: Colors.white,
+                                fontSize: 15,
+                              )),
+                        ),
+                      ),
+                    ],
+                  ),
+                  Divider(
+                    height: 10,
+                  ),
+                ],
+                // ],
+              ),
+            ),
+          ),
+          //   ],
+        );
+      },
+      // );
+      //  },
+    );
+  }
 }
-

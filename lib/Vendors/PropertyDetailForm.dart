@@ -33,9 +33,9 @@ class _State extends State<PropertyDetailsPage> {
               ),
             ),
            title: Image.asset(
-              "images/xoyo.png",
-              height: 50,
-              width: 150,
+              "images/xoyo_vendor_text.png",
+              //height: 50,
+              //width: 150,
             ), 
             centerTitle: true,
             bottom: TabBar(

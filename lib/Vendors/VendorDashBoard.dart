@@ -1,5 +1,8 @@
 import 'package:e_shop/Admin/admin_drawer.dart';
+import 'package:e_shop/Vendors/PropertyDetails.dart';
 import 'package:flutter/material.dart';
+
+import 'VendorDrawer.dart';
 
 void main() {
   runApp(new VendorDashBoard());
@@ -44,33 +47,13 @@ class _MyHomePageState extends State<MyHomePage> {
           ),
         ),
         title: Image.asset(
-          "images/xoyo.png",
+          "images/xoyo_vendor_text.png",
           height: 50,
-          width: 150,
+          //width: 150,
         ),
         centerTitle: true,
-        bottom: TabBar(
-          tabs: [
-            Tab(
-              icon: Icon(
-                Icons.lock,
-                color: Colors.white,
-              ),
-              text: "Login",
-            ),
-            Tab(
-              icon: Icon(
-                Icons.perm_contact_calendar,
-                color: Colors.white,
-              ),
-              text: "Register",
-            )
-          ],
-          indicatorColor: Colors.white,
-          indicatorWeight: 5.0,
-        ),
       ),
-      drawer: AdminDrawer(),
+      drawer: VendorDrawer(),
       body: new ListView(
         padding: const EdgeInsets.all(8),
         children: <Widget>[
@@ -81,8 +64,15 @@ class _MyHomePageState extends State<MyHomePage> {
               textColor: Colors.white,
               color: Colors.red,
               child: Text('Property Details'),
-              onPressed: () {},
+              onPressed: () {
+                Route route =
+                    MaterialPageRoute(builder: (c) => PropertyDetails());
+                Navigator.pushReplacement(context, route);
+              },
             ),
+          ),
+          Divider(
+            height: 10,
           ),
           Container(
             height: 50,
@@ -93,6 +83,9 @@ class _MyHomePageState extends State<MyHomePage> {
               child: Text('Profile Performance'),
               onPressed: () {},
             ),
+          ),
+          Divider(
+            height: 10,
           ),
           Container(
             height: 50,

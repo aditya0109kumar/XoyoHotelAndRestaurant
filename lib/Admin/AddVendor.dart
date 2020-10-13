@@ -192,7 +192,7 @@ class _AddVendorScreenState extends State<AddVendorScreen> {
                   inputFormatters: <TextInputFormatter>[
                     LengthLimitingTextInputFormatter(10),
                     WhitelistingTextInputFormatter.digitsOnly,
-                    BlacklistingTextInputFormatter.singleLineFormatter,
+                   // BlacklistingTextInputFormatter.singleLineFormatter,
                   ],
                 ),
                 CustomTextField(
@@ -339,8 +339,7 @@ class _AddVendorScreenState extends State<AddVendorScreen> {
       'email': fUser.email,
       'name': fullName,
       'password': _passwordTextEditingController.text.trim(),
-      'phone': _phoneTextEditingController.text
-          .trim(), // _phoneTextEditingController.text.trim(),
+      'phone': _phoneTextEditingController.text.trim(),
       'hotel_name': _hotelNameTextEditingController.text.trim(),
     });
 
