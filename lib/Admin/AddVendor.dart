@@ -1,10 +1,10 @@
-import 'dart:io';
+// import 'dart:io';
 import 'package:cloud_firestore/cloud_firestore.dart';
-import 'package:e_shop/Admin/admin_drawer.dart';
-import 'package:e_shop/Admin/uploadItems.dart';
-import 'package:e_shop/Admin/uploadItemsCopy.dart';
-import 'package:e_shop/Authentication/authenication.dart';
-import 'package:e_shop/Config/configForAdmin.dart';
+// import 'package:e_shop/Admin/admin_drawer.dart';
+// import 'package:e_shop/Admin/uploadItems.dart';
+// import 'package:e_shop/Admin/uploadItemsCopy.dart';
+// import 'package:e_shop/Authentication/authenication.dart';
+// import 'package:e_shop/Config/configForAdmin.dart';
 import 'package:e_shop/Widgets/customTextField.dart';
 import 'package:e_shop/DialogBox/errorDialog.dart';
 import 'package:firebase_auth/firebase_auth.dart';
@@ -12,7 +12,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:progress_dialog/progress_dialog.dart';
 import 'package:e_shop/Admin/adminDashboard.dart';
-import 'package:tel_input/tel_input.dart';
+// import 'package:tel_input/tel_input.dart';
 
 class AddVendor extends StatelessWidget {
   @override
@@ -22,7 +22,7 @@ class AddVendor extends StatelessWidget {
         flexibleSpace: Container(
           decoration: new BoxDecoration(
             gradient: new LinearGradient(
-              colors: [Colors.red, Colors.white],
+              colors: [Colors.blue, Colors.blue],
               begin: const FractionalOffset(0.0, 0.0),
               end: const FractionalOffset(2.0, 0.0),
               stops: [0.0, 1.0],
@@ -68,8 +68,8 @@ class _AddVendorScreenState extends State<AddVendorScreen> {
 
   @override
   Widget build(BuildContext context) {
-    double _screenWidth = MediaQuery.of(context).size.width,
-        _screenHeight = MediaQuery.of(context).size.height;
+    double _screenWidth = MediaQuery.of(context).size.width;
+    // _screenHeight = MediaQuery.of(context).size.height;
     return SingleChildScrollView(
       child: Column(
         mainAxisSize: MainAxisSize.max,
@@ -77,27 +77,112 @@ class _AddVendorScreenState extends State<AddVendorScreen> {
           SizedBox(
             height: 8.0,
           ),
+          Center(
+            child: Container(
+              width: 70,
+              color: Colors.pink,
+              child: new Text(
+                "Add Hotel",
+                style: TextStyle(fontSize: 15.0, color: Colors.white),
+              ),
+            ),
+          ),
           Form(
             key: _addVendorFormKey,
             child: Column(
               children: [
-                CustomTextField(
-                  controller: _emailTextEditingController,
-                  data: Icons.email,
-                  hintText: "Email",
-                  isObsecure: false,
+                // CustomTextField(
+                //   controller: _emailTextEditingController,
+                //   data: Icons.email,
+                //   hintText: "Email",
+                //   isObsecure: false,
+                // ),
+                Container(
+                  height: 100.0,
+                  width: 300.0,
+                  child: TextField(
+                    controller: _emailTextEditingController,
+                    style: TextStyle(fontSize: 20.0, color: Colors.white),
+                    cursorColor: Colors.white,
+                    //  data: Icons.lock,
+                    decoration: InputDecoration(
+                      icon: new Icon(
+                        Icons.lock,
+                        color: Colors.pink,
+                      ),
+                      border: InputBorder.none,
+                      // hintText: 'Enter Admin Password',
+                      hintStyle: TextStyle(fontSize: 20.0, color: Colors.white),
+                      labelText: 'Email address',
+                      labelStyle:
+                          TextStyle(fontSize: 20.0, color: Colors.black),
+                      hoverColor: Colors.blue[400],
+                      fillColor: Colors.green[300],
+                    ),
+                    obscureText: false,
+                  ),
                 ),
-                CustomTextField(
-                  controller: _passwordTextEditingController,
-                  data: Icons.lock,
-                  hintText: "Enter a strong password",
-                  isObsecure: true,
+                Container(
+                  height: 100.0,
+                  width: 300.0,
+                  child: TextField(
+                    controller: _passwordTextEditingController,
+                    style: TextStyle(fontSize: 20.0, color: Colors.white),
+                    cursorColor: Colors.white,
+                    //  data: Icons.lock,
+                    decoration: InputDecoration(
+                      icon: new Icon(
+                        Icons.lock,
+                        color: Colors.pink,
+                      ),
+                      border: InputBorder.none,
+                      // hintText: 'Enter Admin Password',
+                      hintStyle: TextStyle(fontSize: 20.0, color: Colors.white),
+                      labelText: 'Email address',
+                      labelStyle:
+                          TextStyle(fontSize: 20.0, color: Colors.white),
+                      hoverColor: Colors.blue[400],
+                      fillColor: Colors.green[300],
+                    ),
+                    obscureText: true,
+                  ),
                 ),
-                CustomTextField(
-                  controller: _cPasswordTextEditingController,
-                  data: Icons.lock,
-                  hintText: "Confirm the password",
-                  isObsecure: true,
+                // CustomTextField(
+                //   controller: _passwordTextEditingController,
+                //   data: Icons.lock,
+                //   hintText: "Enter a strong password",
+                //   isObsecure: true,
+                // ),
+                // CustomTextField(
+                //   controller: _cPasswordTextEditingController,
+                //   data: Icons.lock,
+                //   hintText: "Confirm the password",
+                //   isObsecure: true,
+                // ),
+                Container(
+                  height: 100.0,
+                  width: 300.0,
+                  child: TextField(
+                    controller: _cPasswordTextEditingController,
+                    style: TextStyle(fontSize: 20.0, color: Colors.white),
+                    cursorColor: Colors.white,
+                    //  data: Icons.lock,
+                    decoration: InputDecoration(
+                      icon: new Icon(
+                        Icons.lock,
+                        color: Colors.pink,
+                      ),
+                      border: InputBorder.none,
+                      // hintText: 'Enter Admin Password',
+                      hintStyle: TextStyle(fontSize: 20.0, color: Colors.white),
+                      labelText: 'Email address',
+                      labelStyle:
+                          TextStyle(fontSize: 20.0, color: Colors.white),
+                      hoverColor: Colors.blue[400],
+                      fillColor: Colors.green[300],
+                    ),
+                    obscureText: true,
+                  ),
                 ),
                 DropdownButton<String>(
                   value: title,
@@ -147,52 +232,62 @@ class _AddVendorScreenState extends State<AddVendorScreen> {
                     labelText: 'Phone Number',
                   ),
                 ),
-                DropdownButton<String>(
-                  value: jobPosition,
-                  hint: Text("Job Position in the Business"),
-                  icon: Icon(Icons.keyboard_arrow_down),
-                  iconSize: 24,
-                  elevation: 16,
-                  style: TextStyle(color: Colors.black),
-                  underline: Container(
-                    height: 2,
-                    color: Colors.black,
+                Center(
+                  child: Padding(
+                    padding: const EdgeInsets.all(16.0),
+                    child: Container(
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(10),
+                      ),
+                      child: DropdownButton<String>(
+                        value: jobPosition,
+                        hint: Text("Job Position in the Business"),
+                        icon: Icon(Icons.keyboard_arrow_down),
+                        iconSize: 24,
+                        elevation: 16,
+                        style: TextStyle(color: Colors.black),
+                        underline: Container(
+                          height: 2,
+                          color: Colors.black,
+                        ),
+                        onChanged: (String newValue) {
+                          setState(() {
+                            jobPosition = newValue;
+                          });
+                        },
+                        items: <String>[
+                          'Assistant Manager',
+                          'Brand Manager',
+                          'Director of Business Development',
+                          'Director of E-Commerce',
+                          'Finance Manager',
+                          'Front-office Employee',
+                          'Front-office Manager',
+                          'Marketing Manager',
+                          'Owner',
+                          'Receptionist',
+                          'Reservations Employee',
+                          'Reservations Manager',
+                          'Revenue Manager',
+                          'Rooms Division Manager',
+                          'Sales & Marketing Manager',
+                          'Sales Manager',
+                        ].map<DropdownMenuItem<String>>((String value) {
+                          return DropdownMenuItem<String>(
+                            value: value,
+                            child: Text(value),
+                          );
+                        }).toList(),
+                      ),
+                    ),
                   ),
-                  onChanged: (String newValue) {
-                    setState(() {
-                      jobPosition = newValue;
-                    });
-                  },
-                  items: <String>[
-                    'Assistant Manager',
-                    'Brand Manager',
-                    'Director of Business Development',
-                    'Director of E-Commerce',
-                    'Finance Manager',
-                    'Front-office Employee',
-                    'Front-office Manager',
-                    'Marketing Manager',
-                    'Owner',
-                    'Receptionist',
-                    'Reservations Employee',
-                    'Reservations Manager',
-                    'Revenue Manager',
-                    'Rooms Division Manager',
-                    'Sales & Marketing Manager',
-                    'Sales Manager',
-                  ].map<DropdownMenuItem<String>>((String value) {
-                    return DropdownMenuItem<String>(
-                      value: value,
-                      child: Text(value),
-                    );
-                  }).toList(),
                 ),
                 TextFormField(
                   controller: _phoneTextEditingController,
                   inputFormatters: <TextInputFormatter>[
                     LengthLimitingTextInputFormatter(10),
                     WhitelistingTextInputFormatter.digitsOnly,
-                   // BlacklistingTextInputFormatter.singleLineFormatter,
+                    // BlacklistingTextInputFormatter.singleLineFormatter,
                   ],
                 ),
                 CustomTextField(
@@ -208,7 +303,7 @@ class _AddVendorScreenState extends State<AddVendorScreen> {
             onPressed: () {
               registerButton();
             },
-            color: Colors.red[700],
+            color: Colors.pink,
             child: Text(
               "Register Hotel",
               style: TextStyle(color: Colors.white),
@@ -220,7 +315,7 @@ class _AddVendorScreenState extends State<AddVendorScreen> {
           Container(
             height: 4.0,
             width: _screenWidth * 0.8,
-            color: Colors.red[700],
+            color: Colors.pink,
           ),
           SizedBox(
             height: 15.0,
@@ -343,13 +438,13 @@ class _AddVendorScreenState extends State<AddVendorScreen> {
       'hotel_name': _hotelNameTextEditingController.text.trim(),
     });
 
-    // await XoyoAdmin.sharedPreferences.setString("uid", fUser.uid);
-    // // await Xoyo.sharedPreferences.setString(Xoyo.userUID, fUser.uid);
-    // await XoyoAdmin.sharedPreferences
+    // await XoyoAdmin.shapinkPreferences.setString("uid", fUser.uid);
+    // // await Xoyo.shapinkPreferences.setString(Xoyo.userUID, fUser.uid);
+    // await XoyoAdmin.shapinkPreferences
     //     .setString(XoyoAdmin.userEmail, fUser.email);
-    // await XoyoAdmin.sharedPreferences.setString(XoyoAdmin.userName, fullName);
-    // //await XoyoAdmin.sharedPreferences.setString(Xoyo.userAvatarUrl, userImageUrl);
-    // //await Xoyo.sharedPreferences.setStringList(Xoyo.userCartList, ["garbageValue"]);
+    // await XoyoAdmin.shapinkPreferences.setString(XoyoAdmin.userName, fullName);
+    // //await XoyoAdmin.shapinkPreferences.setString(Xoyo.userAvatarUrl, userImageUrl);
+    // //await Xoyo.shapinkPreferences.setStringList(Xoyo.userCartList, ["garbageValue"]);
 
     pr.hide().then((isHidden) {
       print(isHidden);

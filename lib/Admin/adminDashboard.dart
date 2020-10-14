@@ -1,12 +1,12 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:e_shop/Admin/admin_drawer.dart';
-import 'package:e_shop/Admin/uploadItems.dart';
-import 'package:e_shop/Admin/uploadItemsCopy.dart';
-import 'package:e_shop/Authentication/authenication.dart';
-import 'package:e_shop/Widgets/customTextField.dart';
-import 'package:e_shop/DialogBox/errorDialog.dart';
+// import 'package:e_shop/Admin/uploadItems.dart';
+// import 'package:e_shop/Admin/uploadItemsCopy.dart';
+// import 'package:e_shop/Authentication/authenication.dart';
+// import 'package:e_shop/Widgets/customTextField.dart';
+// import 'package:e_shop/DialogBox/errorDialog.dart';
 import 'package:flutter/material.dart';
-import 'package:multilevel_drawer/multilevel_drawer.dart';
+// import 'package:multilevel_drawer/multilevel_drawer.dart';
 import 'package:fluttertoast/fluttertoast.dart';
 
 class AdminDashBoardPage extends StatelessWidget {
@@ -17,7 +17,7 @@ class AdminDashBoardPage extends StatelessWidget {
         flexibleSpace: Container(
           decoration: new BoxDecoration(
             gradient: new LinearGradient(
-              colors: [Colors.red, Colors.white],
+              colors: [Colors.blue, Colors.blue],
               begin: const FractionalOffset(0.0, 0.0),
               end: const FractionalOffset(2.0, 0.0),
               stops: [0.0, 1.0],

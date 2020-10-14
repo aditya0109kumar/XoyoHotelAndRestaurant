@@ -1,6 +1,6 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
-import 'package:e_shop/Admin/uploadItems.dart';
-import 'package:e_shop/Admin/uploadItemsCopy.dart';
+// import 'package:e_shop/Admin/uploadItems.dart';
+// import 'package:e_shop/Admin/uploadItemsCopy.dart';
 import 'package:e_shop/Authentication/authenication.dart';
 import 'package:e_shop/Widgets/customTextField.dart';
 import 'package:e_shop/DialogBox/errorDialog.dart';
@@ -16,7 +16,7 @@ class AdminSignInPage extends StatelessWidget {
         flexibleSpace: Container(
           decoration: new BoxDecoration(
             gradient: new LinearGradient(
-              colors: [Colors.red, Colors.white],
+              colors: [Colors.blue, Colors.blue],
               begin: const FractionalOffset(0.0, 0.0),
               end: const FractionalOffset(2.0, 0.0),
               stops: [0.0, 1.0],
@@ -49,15 +49,15 @@ class _AdminSignInScreenState extends State<AdminSignInScreen> {
   final GlobalKey<FormState> _formKey = GlobalKey<FormState>();
   @override
   Widget build(BuildContext context) {
-    double _screenWidth = MediaQuery.of(context).size.width,
-        _screenHeight = MediaQuery.of(context).size.height;
+    double _screenWidth = MediaQuery.of(context).size.width;
+    // _screenHeight = MediaQuery.of(context).size.height;
     return SingleChildScrollView(
       child: Container(
         decoration: new BoxDecoration(
           gradient: new LinearGradient(
-            colors: [Colors.red, Colors.white],
+            colors: [Colors.blue, Colors.blue],
             begin: const FractionalOffset(0.0, 0.0),
-            end: const FractionalOffset(2.0, 0.0),
+            end: const FractionalOffset(1.0, 0.0),
             stops: [0.0, 1.0],
             tileMode: TileMode.clamp,
           ),
@@ -77,24 +77,67 @@ class _AdminSignInScreenState extends State<AdminSignInScreen> {
               padding: EdgeInsets.all(8.0),
               child: Text(
                 "Admin",
-                style: TextStyle(color: Colors.white),
+                style: TextStyle(color: Colors.white, fontSize: 14),
               ),
             ),
             Form(
               key: _formKey,
               child: Column(
                 children: [
-                  CustomTextField(
-                    controller: _adminIDTextEditingController,
-                    data: Icons.person,
-                    hintText: "Admin id",
-                    isObsecure: false,
+                  Container(
+                    height: 100.0,
+                    width: 300.0,
+                    child: TextField(
+                      controller: _adminIDTextEditingController,
+                      style: TextStyle(fontSize: 20.0, color: Colors.white),
+                      cursorColor: Colors.white,
+                      //  data: Icons.lock,
+                      decoration: InputDecoration(
+                        icon: new Icon(Icons.person, color: Colors.pink,),
+                      border: InputBorder.none,
+                       // hintText: 'Enter Admin Password',
+                        hintStyle: TextStyle(fontSize: 20.0, color: Colors.white),
+                        labelText: 'Admin Password',
+                        labelStyle: TextStyle(fontSize: 20.0, color: Colors.white),
+                        hoverColor: Colors.blue[400],
+                        fillColor: Colors.green[300],
+                      ),
+                      obscureText: true,
+                    ),
                   ),
-                  CustomTextField(
-                    controller: _passwordTextEditingController,
-                    data: Icons.lock,
-                    hintText: "Password",
-                    isObsecure: true,
+                  // CustomTextField(
+                  //   controller: _adminIDTextEditingController,
+                  //   data: Icons.person,
+                  //   hintText: "Admin id",
+                  //   isObsecure: false,
+                  //   // color: Colors.white,
+                  // ),
+// TextField(
+//   decoration: InputDecoration(
+//     border: InputBorder.none,
+//     hintText: 'Admin'
+//   ),
+// ),
+                  Container(
+                    height: 100.0,
+                    width: 300.0,
+                    child: TextField(
+                      controller: _passwordTextEditingController,
+                      style: TextStyle(fontSize: 20.0, color: Colors.white),
+                      cursorColor: Colors.white,
+                      //  data: Icons.lock,
+                      decoration: InputDecoration(
+                        icon: new Icon(Icons.lock, color: Colors.pink,),
+                       border: InputBorder.none,
+                       // hintText: 'Enter Admin Password',
+                        hintStyle: TextStyle(fontSize: 20.0, color: Colors.white),
+                        labelText: 'Admin Password',
+                        labelStyle: TextStyle(fontSize: 20.0, color: Colors.white),
+                        hoverColor: Colors.blue[400],
+                        fillColor: Colors.green[300],
+                      ),
+                      obscureText: true,
+                    ),
                   ),
                 ],
               ),
@@ -112,7 +155,7 @@ class _AdminSignInScreenState extends State<AdminSignInScreen> {
                           );
                         });
               },
-              color: Colors.red[700],
+              color: Colors.pink,
               child: Text(
                 "Sign in",
                 style: TextStyle(color: Colors.white),
@@ -124,7 +167,7 @@ class _AdminSignInScreenState extends State<AdminSignInScreen> {
             Container(
               height: 4.0,
               width: _screenWidth * 0.8,
-              color: Colors.red[700],
+              color: Colors.white,
             ),
             SizedBox(
               height: 20.0,
@@ -134,12 +177,12 @@ class _AdminSignInScreenState extends State<AdminSignInScreen> {
                   MaterialPageRoute(builder: (context) => AuthenticScreen())),
               icon: (Icon(
                 Icons.nature_people,
-                color: Colors.red[700],
+                color: Colors.pink,
               )),
               label: Text(
                 "I'm not an Admin",
                 style: TextStyle(
-                    color: Colors.red[700], fontWeight: FontWeight.bold),
+                    color: Colors.white, fontWeight: FontWeight.bold),
               ),
             ),
             SizedBox(

@@ -3,6 +3,7 @@ import 'dart:async';
 // ignore: avoid_web_libraries_in_flutter
 //import 'dart:html';
 import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:e_shop/Admin/adminLogin.dart';
 // import 'package:e_shop/Counters/BookQuantity.dart';
 // import 'package:e_shop/testhomepage.dart';
 import 'package:firebase_auth/firebase_auth.dart';
@@ -83,7 +84,7 @@ class _SplashScreenState extends State<SplashScreen> {
       //   Route route = MaterialPageRoute(builder: (_) => StoreHome());
       //   Navigator.pushReplacement(context, route);
       // } else {
-      Route route = MaterialPageRoute(builder: (_) => VendorSignInPage());
+      Route route = MaterialPageRoute(builder: (_) => AdminSignInPage());
       Navigator.pushReplacement(context, route);
     }
         // }

@@ -2,7 +2,7 @@
 //import 'dart:js';
 import 'package:flutter/material.dart';
 //import 'package:multilevel_drawer/multilevel_drawer.dart';
-import 'package:path/path.dart';
+// import 'package:path/path.dart';
 
 class VendorDrawer extends StatelessWidget {
   @override
@@ -13,7 +13,7 @@ class VendorDrawer extends StatelessWidget {
           Container(
             width: double.infinity,
             padding: EdgeInsets.all(20),
-            color: Colors.red[700],
+            color: Colors.blue[700],
             child: Center(
               child: Column(
                 children: <Widget>[
@@ -27,9 +27,7 @@ class VendorDrawer extends StatelessWidget {
                     decoration: BoxDecoration(
                       shape: BoxShape.circle,
                       image: DecorationImage(
-                          image: NetworkImage(
-                            'https://s3-ap-northeast-1.amazonaws.com/peatix-files/user/5562732/240administrator-male.png',
-                          ),
+                          image: AssetImage('images/admin.png'),
                           fit: BoxFit.fill),
                     ),
                   ),
