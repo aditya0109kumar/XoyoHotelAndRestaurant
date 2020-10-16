@@ -14,7 +14,7 @@ class AdminDrawer extends StatelessWidget {
           Container(
             width: double.infinity,
             padding: EdgeInsets.all(20),
-            color: Colors.red[700],
+            color: Colors.blue,
             child: Center(
               child: Column(
                 children: <Widget>[

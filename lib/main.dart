@@ -4,6 +4,8 @@ import 'dart:async';
 //import 'dart:html';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:e_shop/Admin/adminLogin.dart';
+// import 'package:e_shop/Admin/adminLogin.dart';
+// import 'package:e_shop/Vendors/VendorDashBoard.dart';
 // import 'package:e_shop/Counters/BookQuantity.dart';
 // import 'package:e_shop/testhomepage.dart';
 import 'package:firebase_auth/firebase_auth.dart';
@@ -97,7 +99,7 @@ class _SplashScreenState extends State<SplashScreen> {
       child: Container(
         decoration: new BoxDecoration(
           gradient: new LinearGradient(
-              colors: [Colors.red, Colors.white],
+              colors: [Colors.blue, Colors.white],
               begin: const FractionalOffset(0.0, 0.0),
               end: const FractionalOffset(2.0, 0.0),
               stops: [0.0, 1.0],

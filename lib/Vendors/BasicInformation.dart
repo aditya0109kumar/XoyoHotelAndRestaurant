@@ -1,4 +1,4 @@
-import 'package:country_code_picker/country_code_picker.dart';
+// import 'package:country_code_picker/country_code_picker.dart';
 import 'package:e_shop/Widgets/customTextField.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
@@ -24,8 +24,8 @@ class _BasicInfo extends State<BasicInformation> {
 
   @override
   Widget build(BuildContext context) {
-    double _screenWidth = MediaQuery.of(context).size.width,
-        _screenHeight = MediaQuery.of(context).size.height;
+    // double _screenWidth = MediaQuery.of(context).size.width,
+    //     _screenHeight = MediaQuery.of(context).size.height;
 
     return SingleChildScrollView(
       child: Container(

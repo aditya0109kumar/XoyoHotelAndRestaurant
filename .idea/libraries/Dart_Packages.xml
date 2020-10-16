@@ -107,6 +107,13 @@
             </list>
           </value>
         </entry>
+        <entry key="country_code_picker">
+          <value>
+            <list>
+              <option value="C:/flutter/.pub-cache/hosted/pub.dartlang.org/country_code_picker-1.5.0/lib" />
+            </list>
+          </value>
+        </entry>
         <entry key="crypto">
           <value>
             <list>
@@ -118,6 +125,20 @@
           <value>
             <list>
               <option value="C:/flutter/.pub-cache/hosted/pub.dartlang.org/cupertino_icons-0.1.3/lib" />
+            </list>
+          </value>
+        </entry>
+        <entry key="dependencies">
+          <value>
+            <list>
+              <option value="C:/flutter/.pub-cache/hosted/pub.dartlang.org/dependencies-0.1.5/lib" />
+            </list>
+          </value>
+        </entry>
+        <entry key="disposables">
+          <value>
+            <list>
+              <option value="C:/flutter/.pub-cache/hosted/pub.dartlang.org/disposables-0.1.2/lib" />
             </list>
           </value>
         </entry>
@@ -310,6 +331,20 @@
             </list>
           </value>
         </entry>
+        <entry key="modal_bottom_sheet">
+          <value>
+            <list>
+              <option value="C:/flutter/.pub-cache/hosted/pub.dartlang.org/modal_bottom_sheet-0.2.0/lib" />
+            </list>
+          </value>
+        </entry>
+        <entry key="multilevel_drawer">
+          <value>
+            <list>
+              <option value="C:/flutter/.pub-cache/hosted/pub.dartlang.org/multilevel_drawer-1.0.3/lib" />
+            </list>
+          </value>
+        </entry>
         <entry key="nested">
           <value>
             <list>
@@ -499,6 +534,13 @@
             </list>
           </value>
         </entry>
+        <entry key="tel_input">
+          <value>
+            <list>
+              <option value="C:/flutter/.pub-cache/hosted/pub.dartlang.org/tel_input-0.2.2/lib" />
+            </list>
+          </value>
+        </entry>
         <entry key="term_glyph">
           <value>
             <list>
@@ -559,8 +601,11 @@
       <root url="file://C:/flutter/.pub-cache/hosted/pub.dartlang.org/cloud_firestore_web-0.1.1+2/lib" />
       <root url="file://C:/flutter/.pub-cache/hosted/pub.dartlang.org/collection-1.14.13/lib" />
       <root url="file://C:/flutter/.pub-cache/hosted/pub.dartlang.org/convert-2.1.1/lib" />
+      <root url="file://C:/flutter/.pub-cache/hosted/pub.dartlang.org/country_code_picker-1.5.0/lib" />
       <root url="file://C:/flutter/.pub-cache/hosted/pub.dartlang.org/crypto-2.1.5/lib" />
       <root url="file://C:/flutter/.pub-cache/hosted/pub.dartlang.org/cupertino_icons-0.1.3/lib" />
+      <root url="file://C:/flutter/.pub-cache/hosted/pub.dartlang.org/dependencies-0.1.5/lib" />
+      <root url="file://C:/flutter/.pub-cache/hosted/pub.dartlang.org/disposables-0.1.2/lib" />
       <root url="file://C:/flutter/.pub-cache/hosted/pub.dartlang.org/fake_async-1.1.0/lib" />
       <root url="file://C:/flutter/.pub-cache/hosted/pub.dartlang.org/file-5.2.1/lib" />
       <root url="file://C:/flutter/.pub-cache/hosted/pub.dartlang.org/firebase-7.3.0/lib" />
@@ -585,6 +630,8 @@
       <root url="file://C:/flutter/.pub-cache/hosted/pub.dartlang.org/js-0.6.2/lib" />
       <root url="file://C:/flutter/.pub-cache/hosted/pub.dartlang.org/matcher-0.12.8/lib" />
       <root url="file://C:/flutter/.pub-cache/hosted/pub.dartlang.org/meta-1.1.8/lib" />
+      <root url="file://C:/flutter/.pub-cache/hosted/pub.dartlang.org/modal_bottom_sheet-0.2.0/lib" />
+      <root url="file://C:/flutter/.pub-cache/hosted/pub.dartlang.org/multilevel_drawer-1.0.3/lib" />
       <root url="file://C:/flutter/.pub-cache/hosted/pub.dartlang.org/nested-0.0.4/lib" />
       <root url="file://C:/flutter/.pub-cache/hosted/pub.dartlang.org/page_transition-1.1.6/lib" />
       <root url="file://C:/flutter/.pub-cache/hosted/pub.dartlang.org/path-1.7.0/lib" />
@@ -611,6 +658,7 @@
       <root url="file://C:/flutter/.pub-cache/hosted/pub.dartlang.org/stack_trace-1.9.5/lib" />
       <root url="file://C:/flutter/.pub-cache/hosted/pub.dartlang.org/stream_channel-2.0.0/lib" />
       <root url="file://C:/flutter/.pub-cache/hosted/pub.dartlang.org/string_scanner-1.0.5/lib" />
+      <root url="file://C:/flutter/.pub-cache/hosted/pub.dartlang.org/tel_input-0.2.2/lib" />
       <root url="file://C:/flutter/.pub-cache/hosted/pub.dartlang.org/term_glyph-1.1.0/lib" />
       <root url="file://C:/flutter/.pub-cache/hosted/pub.dartlang.org/test_api-0.2.17/lib" />
       <root url="file://C:/flutter/.pub-cache/hosted/pub.dartlang.org/typed_data-1.2.0/lib" />

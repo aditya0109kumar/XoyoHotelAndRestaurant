@@ -98,27 +98,38 @@ class _AddVendorScreenState extends State<AddVendorScreen> {
                 //   isObsecure: false,
                 // ),
                 Container(
-                  height: 100.0,
-                  width: 300.0,
-                  child: TextField(
+                  decoration: BoxDecoration(
+                    color: Colors.transparent,
+                    borderRadius: BorderRadius.all(Radius.circular(10.0)),
+                  ),
+                  padding: EdgeInsets.all(8.0),
+                  margin: EdgeInsets.all(10.0),
+                  child: TextFormField(
                     controller: _emailTextEditingController,
-                    style: TextStyle(fontSize: 20.0, color: Colors.white),
-                    cursorColor: Colors.white,
+                    style: TextStyle(fontSize: 20.0, color: Colors.black),
+                    cursorColor: Colors.black,
                     //  data: Icons.lock,
+                    // decoration: InputDecoration(
+                    //   icon: new Icon(
+                    //     Icons.lock,
+                    //     color: Colors.pink,
+                    //   ),
+                    //   border: InputBorder.none,
+                    //   // hintText: 'Enter Admin Password',
+                    //   hintStyle: TextStyle(fontSize: 20.0, color: Colors.black),
+                    //   labelText: 'Enter Email address',
+                    //   labelStyle:
+                    //       TextStyle(fontSize: 20.0, color: Colors.black),
+                    //   hoverColor: Colors.blue[400],
+                    //   fillColor: Colors.green[300],
+                    // ),
                     decoration: InputDecoration(
-                      icon: new Icon(
-                        Icons.lock,
-                        color: Colors.pink,
-                      ),
                       border: InputBorder.none,
-                      // hintText: 'Enter Admin Password',
-                      hintStyle: TextStyle(fontSize: 20.0, color: Colors.white),
-                      labelText: 'Email address',
-                      labelStyle:
-                          TextStyle(fontSize: 20.0, color: Colors.black),
-                      hoverColor: Colors.blue[400],
-                      fillColor: Colors.green[300],
+                      prefixIcon: Icon(Icons.email, color: Colors.red[700]),
+                      focusColor: Theme.of(context).primaryColor,
+                      // hintText: hintText,
                     ),
+
                     obscureText: false,
                   ),
                 ),
@@ -127,8 +138,8 @@ class _AddVendorScreenState extends State<AddVendorScreen> {
                   width: 300.0,
                   child: TextField(
                     controller: _passwordTextEditingController,
-                    style: TextStyle(fontSize: 20.0, color: Colors.white),
-                    cursorColor: Colors.white,
+                    style: TextStyle(fontSize: 20.0, color: Colors.black),
+                    cursorColor: Colors.black,
                     //  data: Icons.lock,
                     decoration: InputDecoration(
                       icon: new Icon(
@@ -137,10 +148,10 @@ class _AddVendorScreenState extends State<AddVendorScreen> {
                       ),
                       border: InputBorder.none,
                       // hintText: 'Enter Admin Password',
-                      hintStyle: TextStyle(fontSize: 20.0, color: Colors.white),
-                      labelText: 'Email address',
+                      hintStyle: TextStyle(fontSize: 20.0, color: Colors.black),
+                      labelText: 'Enter a Password',
                       labelStyle:
-                          TextStyle(fontSize: 20.0, color: Colors.white),
+                          TextStyle(fontSize: 20.0, color: Colors.black),
                       hoverColor: Colors.blue[400],
                       fillColor: Colors.green[300],
                     ),
@@ -164,8 +175,8 @@ class _AddVendorScreenState extends State<AddVendorScreen> {
                   width: 300.0,
                   child: TextField(
                     controller: _cPasswordTextEditingController,
-                    style: TextStyle(fontSize: 20.0, color: Colors.white),
-                    cursorColor: Colors.white,
+                    style: TextStyle(fontSize: 20.0, color: Colors.black),
+                    cursorColor: Colors.black,
                     //  data: Icons.lock,
                     decoration: InputDecoration(
                       icon: new Icon(
@@ -174,10 +185,10 @@ class _AddVendorScreenState extends State<AddVendorScreen> {
                       ),
                       border: InputBorder.none,
                       // hintText: 'Enter Admin Password',
-                      hintStyle: TextStyle(fontSize: 20.0, color: Colors.white),
-                      labelText: 'Email address',
+                      hintStyle: TextStyle(fontSize: 20.0, color: Colors.black),
+                      labelText: 'Confirm Password',
                       labelStyle:
-                          TextStyle(fontSize: 20.0, color: Colors.white),
+                          TextStyle(fontSize: 20.0, color: Colors.black),
                       hoverColor: Colors.blue[400],
                       fillColor: Colors.green[300],
                     ),
@@ -225,6 +236,7 @@ class _AddVendorScreenState extends State<AddVendorScreen> {
                 ),
                 TextField(
                   maxLengthEnforced: true,
+                  keyboardType: TextInputType.number,
                   maxLength: 10,
                   obscureText: false,
                   decoration: InputDecoration(
