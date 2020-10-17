@@ -2,6 +2,8 @@ import 'package:e_shop/Admin/admin_drawer.dart';
 import 'package:e_shop/Vendors/PropertyDetails.dart';
 import 'package:flutter/material.dart';
 
+import 'BasicInformation.dart';
+import 'PropertyDetailForm.dart';
 import 'VendorDrawer.dart';
 
 void main() {
@@ -76,20 +78,37 @@ class _MyHomePageState extends State<MyHomePage> {
           Divider(
             height: 10,
           ),
-          Container(
-            height: 150.0,
-            width: 150.0,
-            decoration: BoxDecoration(
-              
-                color: Colors.blue,
-                shape: BoxShape.circle,
-                boxShadow: [
-                  BoxShadow(
-                    offset: const Offset(3.0, 3.0),
-                    blurRadius: 5.0,
-                    spreadRadius: 2.0,
-                  ),
-                ]),
+          InkWell(
+            child: Container(
+              height: 150.0,
+              width: 150.0,
+              decoration: BoxDecoration(
+                // color: Colors.blue,
+                // shape: BoxShape.circle,
+                image: DecorationImage(
+                  scale: 0.5,
+                  image: AssetImage('images/property_details.jpg'),
+                ),
+                // boxShadow: [
+                //   BoxShadow(
+                //     offset: const Offset(3.0, 3.0),
+                //     blurRadius: 5.0,
+                //     spreadRadius: 2.0,
+                //   ),
+                // ]
+              ),
+            ),
+            onTap: () {
+              Route route =
+                  MaterialPageRoute(builder: (c) => PropertyDetailsPage());
+              Navigator.pushReplacement(context, route);
+            },
+          ),
+          Center(
+            child: Text(
+              "Property Details",
+              style: TextStyle(fontWeight: FontWeight.bold),
+            ),
           ),
           Divider(
             height: 10,
@@ -107,19 +126,35 @@ class _MyHomePageState extends State<MyHomePage> {
           Divider(
             height: 10,
           ),
-          Container(
-            height: 125.0,
-            width: 125.0,
-            decoration: BoxDecoration(
-                color: Colors.blue,
-                shape: BoxShape.circle,
-                boxShadow: [
-                  BoxShadow(
-                    offset: const Offset(3.0, 3.0),
-                    blurRadius: 5.0,
-                    spreadRadius: 2.0,
-                  ),
-                ]),
+          InkWell(
+            child: Container(
+              height: 125.0,
+              width: 125.0,
+              decoration: BoxDecoration(
+                image: DecorationImage(
+                  scale: 0.5,
+                  image: AssetImage('images/performance.jpg'),
+                ),
+                // color: Colors.blue,
+                // shape: BoxShape.circle,
+                // boxShadow: [
+                //   BoxShadow(
+                //     offset: const Offset(3.0, 3.0),
+                //     blurRadius: 5.0,
+                //     spreadRadius: 2.0,
+                //   ),
+                // ]
+              ),
+            ),
+            onTap: () {
+              print("Tapped on container");
+            },
+          ),
+          Center(
+            child: Text(
+              "Performance",
+              style: TextStyle(fontWeight: FontWeight.bold),
+            ),
           ),
           Divider(
             height: 10,
@@ -137,19 +172,35 @@ class _MyHomePageState extends State<MyHomePage> {
           Divider(
             height: 10,
           ),
-          Container(
-            height: 100.0,
-            width: 100.0,
-            decoration: BoxDecoration(
-                color: Colors.blue,
-                shape: BoxShape.circle,
-                boxShadow: [
-                  BoxShadow(
-                    offset: const Offset(3.0, 3.0),
-                    blurRadius: 5.0,
-                    spreadRadius: 2.0,
-                  ),
-                ]),
+          InkWell(
+            child: Container(
+              height: 100.0,
+              width: 100.0,
+              decoration: BoxDecoration(
+                image: DecorationImage(
+                  scale: 0.5,
+                  image: AssetImage('images/ratings.jpg'),
+                ),
+                // color: Colors.blue,
+                // shape: BoxShape.circle,
+                // boxShadow: [
+                //   BoxShadow(
+                //     offset: const Offset(3.0, 3.0),
+                //     blurRadius: 5.0,
+                //     spreadRadius: 2.0,
+                //   ),
+                // ]
+              ),
+            ),
+            onTap: () {
+              print("Tapped on container");
+            },
+          ),
+          Center(
+            child: Text(
+              "Ratings",
+              style: TextStyle(fontWeight: FontWeight.bold),
+            ),
           ),
           Divider(
             height: 10,
@@ -159,8 +210,9 @@ class _MyHomePageState extends State<MyHomePage> {
     );
   }
 
-  void propertyDetails() {
-    Route route = MaterialPageRoute(builder: (c) => VendorDashBoard());
+  // ignore: missing_return
+  Future<Null> propertyDetails() {
+    Route route = MaterialPageRoute(builder: (c) => PropertyDetailsPage());
     Navigator.pushReplacement(context, route);
   }
 }

@@ -1,5 +1,7 @@
 // import 'package:country_code_picker/country_code_picker.dart';
+import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:e_shop/Widgets/customTextField.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
@@ -240,6 +242,7 @@ class _BasicInfo extends State<BasicInformation> {
   }
 
   void _showDialogFacilities() {
+    bool chk = false;
     showDialog(
       context: context,
       barrierDismissible: false,
@@ -274,10 +277,17 @@ class _BasicInfo extends State<BasicInformation> {
                     height: 15,
                   ),
                   CheckboxListTile(
-                    value: false,
+                    value: chk,
                     title: Text("Business Center"),
                     onChanged: (value) {
-                      setState(() {});
+                      setState(() {
+                        chk = value;
+                        // if (value == true) {
+                        //   amenities('Business Center', '1');
+                        // } else {
+                        //   amenities('Business Center', '0');
+                        // }
+                      });
                     },
                   ),
                   Divider(
@@ -437,7 +447,31 @@ class _BasicInfo extends State<BasicInformation> {
                     value: false,
                     title: Text("Doctor on site"),
                     onChanged: (value) {
-                      setState(() {});
+                      setState(() {
+                        if (value == true) {
+                          //                       Firestore.instance.collection('vendors').document(fUser.uid).setData({
+                          //   'uid': fUser.uid,
+                          //   'email': fUser.email,
+                          //   'name': fullName,
+                          //   'password': _passwordTextEditingController.text.trim(),
+                          //   'phone': _phoneTextEditingController.text.trim(),
+                          //   'hotel_name': _hotelNameTextEditingController.text.trim(),
+                          // });
+
+/*
+
+  Future<void> getUserDoc() async {
+    final FirebaseAuth _auth = FirebaseAuth.instance;
+    final Firestore _firestore = Firestore.instance;
+
+    FirebaseUser user = await _auth.currentUser();
+    DocumentReference ref = _firestore.collection('users').document(user.uid);
+    return ref.setData({'UID': user.uid});
+  }
+*/
+
+                        }
+                      });
                     },
                   ),
                   Divider(
@@ -1728,5 +1762,18 @@ class _BasicInfo extends State<BasicInformation> {
       // );
       //  },
     );
+  }
+
+  Future<void> amenities(String amm, String val) async {
+    final FirebaseAuth _auth = FirebaseAuth.instance;
+    final Firestore _firestore = Firestore.instance;
+
+    FirebaseUser user = await _auth.currentUser();
+    DocumentReference ref = _firestore
+        .collection('vendors')
+        .document(user.uid)
+        .collection('amenities')
+        .document('facilities_and_services');
+    return ref.setData({amm: val});
   }
 }

@@ -2,6 +2,7 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:e_shop/Authentication/authenication.dart';
 import 'package:e_shop/Widgets/customTextField.dart';
 import 'package:e_shop/DialogBox/errorDialog.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:progress_dialog/progress_dialog.dart';
 import 'VendorDashBoard.dart';
@@ -153,7 +154,7 @@ class _VendorSignInScreenState extends State<VendorSignInScreen> {
     final pr = ProgressDialog(context,
         type: ProgressDialogType.Normal, isDismissible: false, showLogs: false);
     pr.style(
-      message: 'Authenticating, Please wait',
+      message: 'Authenticating...',
       borderRadius: 10.0,
       backgroundColor: Colors.white,
       progressWidget: CircularProgressIndicator(),
@@ -167,6 +168,28 @@ class _VendorSignInScreenState extends State<VendorSignInScreen> {
           color: Colors.black, fontSize: 19.0, fontWeight: FontWeight.w600),
     );
     await pr.show();
+    FirebaseAuth _auth = FirebaseAuth.instance;
+    FirebaseUser firebaseUser;
+    await _auth.signInWithEmailAndPassword(
+      email: _vendorIDTextEditingController.text.trim(),
+      password: _passwordTextEditingController.text.trim(),
+    )
+    .then((authUser) {
+      firebaseUser = authUser.user;
+    }).catchError((error) {
+      Navigator.pop(context);
+      showDialog(
+          context: context,
+          builder: (c) {
+            return ErrorAlertDialog(
+              message: error.message.toString(),
+            );
+          });
+      if (firebaseUser != null) {
+       Route route = MaterialPageRoute(builder: (c) => VendorDashBoard());
+          Navigator.pushReplacement(context, route);
+      }
+    });
     Firestore.instance.collection("vendors").getDocuments().then((snapshot) {
       snapshot.documents.forEach((result) {
         if (result.data["email"] !=
