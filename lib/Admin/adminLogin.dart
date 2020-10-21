@@ -4,6 +4,7 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:e_shop/Authentication/authenication.dart';
 import 'package:e_shop/Widgets/customTextField.dart';
 import 'package:e_shop/DialogBox/errorDialog.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 
 import 'adminDashboard.dart';
@@ -93,12 +94,17 @@ class _AdminSignInScreenState extends State<AdminSignInScreen> {
                       cursorColor: Colors.white,
                       //  data: Icons.lock,
                       decoration: InputDecoration(
-                        icon: new Icon(Icons.person, color: Colors.pink,),
-                      border: InputBorder.none,
-                       // hintText: 'Enter Admin Password',
-                        hintStyle: TextStyle(fontSize: 20.0, color: Colors.white),
+                        icon: new Icon(
+                          Icons.person,
+                          color: Colors.pink,
+                        ),
+                        border: InputBorder.none,
+                        // hintText: 'Enter Admin Password',
+                        hintStyle:
+                            TextStyle(fontSize: 20.0, color: Colors.white),
                         labelText: 'Admin Password',
-                        labelStyle: TextStyle(fontSize: 20.0, color: Colors.white),
+                        labelStyle:
+                            TextStyle(fontSize: 20.0, color: Colors.white),
                         hoverColor: Colors.blue[400],
                         fillColor: Colors.green[300],
                       ),
@@ -127,12 +133,17 @@ class _AdminSignInScreenState extends State<AdminSignInScreen> {
                       cursorColor: Colors.white,
                       //  data: Icons.lock,
                       decoration: InputDecoration(
-                        icon: new Icon(Icons.lock, color: Colors.pink,),
-                       border: InputBorder.none,
-                       // hintText: 'Enter Admin Password',
-                        hintStyle: TextStyle(fontSize: 20.0, color: Colors.white),
+                        icon: new Icon(
+                          Icons.lock,
+                          color: Colors.pink,
+                        ),
+                        border: InputBorder.none,
+                        // hintText: 'Enter Admin Password',
+                        hintStyle:
+                            TextStyle(fontSize: 20.0, color: Colors.white),
                         labelText: 'Admin Password',
-                        labelStyle: TextStyle(fontSize: 20.0, color: Colors.white),
+                        labelStyle:
+                            TextStyle(fontSize: 20.0, color: Colors.white),
                         hoverColor: Colors.blue[400],
                         fillColor: Colors.green[300],
                       ),
@@ -181,8 +192,8 @@ class _AdminSignInScreenState extends State<AdminSignInScreen> {
               )),
               label: Text(
                 "I'm not an Admin",
-                style: TextStyle(
-                    color: Colors.white, fontWeight: FontWeight.bold),
+                style:
+                    TextStyle(color: Colors.white, fontWeight: FontWeight.bold),
               ),
             ),
             SizedBox(
@@ -196,7 +207,7 @@ class _AdminSignInScreenState extends State<AdminSignInScreen> {
 
   loginAdmin() {
     Firestore.instance.collection("admins").getDocuments().then((snapshot) {
-      snapshot.documents.forEach((result) {
+      snapshot.documents.forEach((result) async {
         if (result.data["id"] != _adminIDTextEditingController.text.trim()) {
           final snackBar = SnackBar(content: Text('Your ID is not correct'));
           Scaffold.of(context).showSnackBar(snackBar);
@@ -215,7 +226,10 @@ class _AdminSignInScreenState extends State<AdminSignInScreen> {
             _adminIDTextEditingController.text = "";
             _passwordTextEditingController.text = "";
           });
-
+          final FirebaseAuth auth = FirebaseAuth.instance;
+          final FirebaseUser user = await auth.currentUser();
+          final uid = user.uid;
+          print(uid);
           Route route = MaterialPageRoute(builder: (c) => AdminDashBoardPage());
           Navigator.pushReplacement(context, route);
         }

@@ -1,10 +1,10 @@
-import 'package:flutter/material.dart';
+// import 'package:flutter/material.dart';
 
 
-class WideButton extends StatelessWidget {
+// class WideButton extends StatelessWidget {
 
-  @override
-  Widget build(BuildContext context) {
-    return Padding();
-  }
-}
+//   @override
+//   Widget build(BuildContext context) {
+//     return Padding();
+//   }
+// }

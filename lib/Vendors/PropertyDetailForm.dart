@@ -1,13 +1,13 @@
-import 'package:cloud_firestore/cloud_firestore.dart';
+// import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:e_shop/Authentication/register.dart';
-import 'package:e_shop/Config/configForVendor.dart';
-import 'package:e_shop/DialogBox/errorDialog.dart';
-import 'package:firebase_auth/firebase_auth.dart';
+// import 'package:e_shop/Config/configForVendor.dart';
+// import 'package:e_shop/DialogBox/errorDialog.dart';
+// import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
-import 'package:progress_dialog/progress_dialog.dart';
+// import 'package:progress_dialog/progress_dialog.dart';
 
 import 'BasicInformation.dart';
-import 'VendorDashBoard.dart';
+// import 'VendorDashBoard.dart';
 
 class PropertyDetailsPage extends StatefulWidget {
   @override

@@ -1,8 +1,9 @@
-import 'package:e_shop/Admin/admin_drawer.dart';
-import 'package:e_shop/Vendors/PropertyDetails.dart';
+// import 'package:e_shop/Admin/admin_drawer.dart';
+// import 'package:e_shop/Vendors/PropertyDetails.dart';
+// import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 
-import 'BasicInformation.dart';
+//import 'BasicInformation.dart';
 import 'PropertyDetailForm.dart';
 import 'VendorDrawer.dart';
 
@@ -11,6 +12,7 @@ void main() {
 }
 
 class VendorDashBoard extends StatelessWidget {
+  
   @override
   Widget build(BuildContext context) {
     return new MaterialApp(
@@ -26,7 +28,8 @@ class VendorDashBoard extends StatelessWidget {
   }
 }
 
-class MyHomePage extends StatefulWidget {
+class MyHomePage extends StatefulWidget 
+{ 
   MyHomePage({Key key}) : super(key: key);
   @override
   _MyHomePageState createState() => new _MyHomePageState();

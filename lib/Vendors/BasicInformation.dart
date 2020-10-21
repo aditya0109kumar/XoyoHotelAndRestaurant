@@ -20,6 +20,43 @@ class _BasicInfo extends State<BasicInformation> {
   final TextEditingController hotelEmail = TextEditingController();
   final TextEditingController hotelChainName = TextEditingController();
   final GlobalKey<FormState> _vendorFormKey = GlobalKey<FormState>();
+  bool chk1 = false,
+      chk2 = false,
+      chk3 = false,
+      chk4 = false,
+      chk5 = false,
+      chk6 = false,
+      chk7 = false,
+      chk8 = false,
+      chk9 = false,
+      chk10 = false,
+      chk11 = false,
+      chk12 = false,
+      chk13 = false,
+      chk14 = false,
+      chk15 = false,
+      chk16 = false,
+      chk17 = false,
+      chk18 = false,
+      chk19 = false,
+      chk20 = false,
+      chk21 = false,
+      chk22 = false,
+      chk23 = false,
+      chk24 = false,
+      chk25 = false,
+      chk26 = false,
+      chk27 = false,
+      chk28 = false,
+      chk29 = false,
+      chk30 = false,
+      chk31 = false,
+      chk32 = false,
+      chk33 = false,
+      chk34 = false,
+      chk35 = false,
+      chk36 = false,
+      chk37 = false;
   String hotelType = "Hotel", hotelStars = "One";
   TimeOfDay _checkInTime = TimeOfDay.now();
   TimeOfDay _checkOutTime = TimeOfDay.now();
@@ -242,7 +279,6 @@ class _BasicInfo extends State<BasicInformation> {
   }
 
   void _showDialogFacilities() {
-    bool chk = false;
     showDialog(
       context: context,
       barrierDismissible: false,
@@ -277,11 +313,11 @@ class _BasicInfo extends State<BasicInformation> {
                     height: 15,
                   ),
                   CheckboxListTile(
-                    value: chk,
+                    value: chk1,
                     title: Text("Business Center"),
                     onChanged: (value) {
                       setState(() {
-                        chk = value;
+                        chk1 = value;
                         // if (value == true) {
                         //   amenities('Business Center', '1');
                         // } else {
@@ -294,10 +330,12 @@ class _BasicInfo extends State<BasicInformation> {
                     height: 10,
                   ),
                   CheckboxListTile(
-                    value: false,
+                    value: chk2,
                     title: Text("Disco/Night club"),
                     onChanged: (value) {
-                      setState(() {});
+                      setState(() {
+                        chk2 = value;
+                      });
                     },
                   ),
                   Divider(
@@ -540,7 +578,11 @@ class _BasicInfo extends State<BasicInformation> {
                         color: Colors.blue[900],
                         child: MaterialButton(
                           padding: EdgeInsets.fromLTRB(10.0, 5.0, 10.0, 5.0),
-                          onPressed: () {},
+                          onPressed: () {
+                            if (chk1 == true) {
+                              amenities('Business_Center','1');
+                            }
+                          },
                           child: Text("Save",
                               textAlign: TextAlign.center,
                               style: TextStyle(

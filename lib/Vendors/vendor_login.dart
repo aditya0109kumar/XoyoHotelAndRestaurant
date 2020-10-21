@@ -102,7 +102,7 @@ class _VendorSignInScreenState extends State<VendorSignInScreen> {
               onPressed: () {
                 _vendorIDTextEditingController.text.isNotEmpty &&
                         _passwordTextEditingController.text.isNotEmpty
-                    ? vendorAdmin()
+                    ? vendorLogin2()
                     : showDialog(
                         context: context,
                         builder: (c) {
@@ -168,13 +168,15 @@ class _VendorSignInScreenState extends State<VendorSignInScreen> {
           color: Colors.black, fontSize: 19.0, fontWeight: FontWeight.w600),
     );
     await pr.show();
-    FirebaseAuth _auth = FirebaseAuth.instance;
+    // FirebaseAuth _auth = FirebaseAuth.instance;
+    final _auth = FirebaseAuth.instance;
     FirebaseUser firebaseUser;
-    await _auth.signInWithEmailAndPassword(
+    await _auth
+        .signInWithEmailAndPassword(
       email: _vendorIDTextEditingController.text.trim(),
       password: _passwordTextEditingController.text.trim(),
     )
-    .then((authUser) {
+        .then((authUser) {
       firebaseUser = authUser.user;
     }).catchError((error) {
       Navigator.pop(context);
@@ -186,39 +188,54 @@ class _VendorSignInScreenState extends State<VendorSignInScreen> {
             );
           });
       if (firebaseUser != null) {
-       Route route = MaterialPageRoute(builder: (c) => VendorDashBoard());
-          Navigator.pushReplacement(context, route);
+        Route route = MaterialPageRoute(builder: (c) => VendorDashBoard());
+        Navigator.pushReplacement(context, route);
       }
     });
-    Firestore.instance.collection("vendors").getDocuments().then((snapshot) {
-      snapshot.documents.forEach((result) {
-        if (result.data["email"] !=
-            _vendorIDTextEditingController.text.trim()) {
-          final snackBar = SnackBar(content: Text('Your ID is not correct'));
-          Scaffold.of(context).showSnackBar(snackBar);
-        } else if (result.data["password"] !=
-            _passwordTextEditingController.text.trim()) {
-          final snackBar =
-              SnackBar(content: Text('Your Password is incorrect'));
-          Scaffold.of(context).showSnackBar(snackBar);
-        } else {
-          final snackBar = SnackBar(
-            content: Text('Welcome ' + result.data["name"]),
-          );
-          Scaffold.of(context).showSnackBar(snackBar);
+    // Firestore.instance.collection("vendors").getDocuments().then((snapshot) {
+    //   snapshot.documents.forEach((result) {
+    //     if (result.data["email"] !=
+    //         _vendorIDTextEditingController.text.trim()) {
+    //       final snackBar = SnackBar(content: Text('Your ID is not correct'));
+    //       Scaffold.of(context).showSnackBar(snackBar);
+    //     } else if (result.data["password"] !=
+    //         _passwordTextEditingController.text.trim()) {
+    //       final snackBar =
+    //           SnackBar(content: Text('Your Password is incorrect'));
+    //       Scaffold.of(context).showSnackBar(snackBar);
+    //     } else {
+    //       final snackBar = SnackBar(
+    //         content: Text('Welcome ' + result.data["name"]),
+    //       );
+    //       Scaffold.of(context).showSnackBar(snackBar);
 
-          setState(() {
-            _vendorIDTextEditingController.text = "";
-            _passwordTextEditingController.text = "";
-          });
+    //       setState(() {
+    //         _vendorIDTextEditingController.text = "";
+    //         _passwordTextEditingController.text = "";
+    //       });
 
-          Route route = MaterialPageRoute(builder: (c) => VendorDashBoard());
-          Navigator.pushReplacement(context, route);
-        }
-        pr.hide().then((isHidden) {
-          print(isHidden);
-        });
-      });
+    //       Route route = MaterialPageRoute(builder: (c) => VendorDashBoard());
+    //       Navigator.pushReplacement(context, route);
+    //     }
+    //     pr.hide().then((isHidden) {
+    //       print(isHidden);
+    //     });
+    //   });
+    // });
+    pr.hide().then((isHidden) {
+      print(isHidden);
     });
   }
-}
+
+  Future<void> vendorLogin2() async {
+    
+      AuthResult user = await FirebaseAuth.instance
+              .signInWithEmailAndPassword(
+                  email: _vendorIDTextEditingController.text.trim(),
+                  password: _passwordTextEditingController.text.trim())
+          ;
+          Navigator.push(context, MaterialPageRoute(builder: (context)=>VendorDashBoard()));
+    
+    }
+  }
+

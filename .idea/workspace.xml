@@ -5,22 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f86eb4c4-25d7-4f14-9ce8-514a00d075b4" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.flutter-plugins-dependencies" beforeDir="false" afterPath="$PROJECT_DIR$/.flutter-plugins-dependencies" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Dart_Packages.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Dart_Packages.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/Admin/AddVendor.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/Admin/AddVendor.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/Admin/admin_drawer.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/Admin/admin_drawer.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/Vendors/BasicInformation.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/Vendors/BasicInformation.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/Vendors/VendorDashBoard.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/Vendors/VendorDashBoard.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/main.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/main.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pubspec.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/pubspec.yaml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ExecutionTargetManager" SELECTED_TARGET="Pixel_API_28" />
+  <component name="ExecutionTargetManager" SELECTED_TARGET="Pixel_2_API_30" />
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
@@ -128,14 +120,14 @@
       <screen x="0" y="0" width="1440" height="860" />
     </state>
     <state x="220" y="63" key="SettingsEditor/0.0.1440.860@0.0.1440.860" timestamp="1600157330590" />
-    <state x="85" y="121" width="1256" height="676" key="com.android.tools.idea.avdmanager.AvdListDialog" timestamp="1602758732413">
+    <state x="85" y="121" width="1256" height="676" key="com.android.tools.idea.avdmanager.AvdListDialog" timestamp="1602913017405">
       <screen x="0" y="0" width="1440" height="860" />
     </state>
-    <state x="85" y="121" width="1256" height="676" key="com.android.tools.idea.avdmanager.AvdListDialog/0.0.1440.860@0.0.1440.860" timestamp="1602758732413" />
-    <state x="286" y="252" key="com.intellij.ide.util.TipDialog" timestamp="1602758681541">
+    <state x="85" y="121" width="1256" height="676" key="com.android.tools.idea.avdmanager.AvdListDialog/0.0.1440.860@0.0.1440.860" timestamp="1602913017405" />
+    <state x="286" y="252" key="com.intellij.ide.util.TipDialog" timestamp="1602912503971">
       <screen x="0" y="0" width="1440" height="860" />
     </state>
-    <state x="286" y="252" key="com.intellij.ide.util.TipDialog/0.0.1440.860@0.0.1440.860" timestamp="1602758681541" />
+    <state x="286" y="252" key="com.intellij.ide.util.TipDialog/0.0.1440.860@0.0.1440.860" timestamp="1602912503971" />
     <state x="376" y="195" key="run.anything.popup" timestamp="1600682717632">
       <screen x="0" y="0" width="1440" height="860" />
     </state>

@@ -33,6 +33,7 @@ import 'package:e_shop/Config/config.dart';
 // import 'Vendors/BasicInformation.dart';
 // import 'Vendors/PropertyDetailForm.dart';
 // import 'Vendors/VendorDashBoard.dart';
+// import 'Vendors/UploadMultipleImage.dart';
 import 'Vendors/vendor_login.dart';
 // import 'Widgets/hotelBookingForm.dart';
 
@@ -82,7 +83,7 @@ class _SplashScreenState extends State<SplashScreen> {
 
   displaySplash() {
     Timer(Duration(seconds: 5), () async {
-      // if (await Xoyo.auth.currentUser() != null) {
+      // if (await Xoyo.auth.currentUser() != null) {+
       //   Route route = MaterialPageRoute(builder: (_) => StoreHome());
       //   Navigator.pushReplacement(context, route);
       // } else {
