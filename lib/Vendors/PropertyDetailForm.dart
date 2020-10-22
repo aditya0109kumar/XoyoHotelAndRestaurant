@@ -7,6 +7,7 @@ import 'package:flutter/material.dart';
 // import 'package:progress_dialog/progress_dialog.dart';
 
 import 'BasicInformation.dart';
+import 'UploadHotelImages.dart';
 // import 'VendorDashBoard.dart';
 
 class PropertyDetailsPage extends StatefulWidget {
@@ -68,7 +69,7 @@ class _State extends State<PropertyDetailsPage> {
                 ),
               ),
               child: TabBarView(
-                children: [BasicInformation(), Register()],
+                children: [BasicInformation(), UploadHotelImages()],
               )),
         ));
   }
