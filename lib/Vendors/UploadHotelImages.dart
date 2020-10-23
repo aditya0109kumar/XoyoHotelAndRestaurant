@@ -54,6 +54,7 @@ class _UploadImagesState extends State<UploadImages> {
   //     _imageRoom4,
   //     _imageRoom5;
   List<File> hotelImages = List<File>(15);
+  List<String> vendorImageURL = List<String>(15);
   final picker = ImagePicker();
   @override
   Widget build(BuildContext context) {
@@ -359,30 +360,28 @@ class _UploadImagesState extends State<UploadImages> {
                   //         )
                   //       : null,
                   // ),
-                  child: hotelImages[12] != null ? ClipRRect(
-                      borderRadius: BorderRadius.circular(10),
-                      child: Image.file(
-                        hotelImages[12],
-                        width: 10,
-                        height: 10,
-                        fit: BoxFit.fitHeight,
-                      ),
-                    )
-                    : Container(
-                      decoration: BoxDecoration(
-                          color: Colors.grey[200],
-                          borderRadius: BorderRadius.circular(10)),
-                      width: 10,
-                      height: 10,
-                      child: Icon(
-                        Icons.camera_alt,
-                        color: Colors.grey[800],
-                      ),
-                    ),
-
-
+                  child: hotelImages[12] != null
+                      ? ClipRRect(
+                          borderRadius: BorderRadius.circular(10),
+                          child: Image.file(
+                            hotelImages[12],
+                            width: 10,
+                            height: 10,
+                            fit: BoxFit.fitHeight,
+                          ),
+                        )
+                      : Container(
+                          decoration: BoxDecoration(
+                              color: Colors.grey[200],
+                              borderRadius: BorderRadius.circular(10)),
+                          width: 10,
+                          height: 10,
+                          child: Icon(
+                            Icons.camera_alt,
+                            color: Colors.grey[800],
+                          ),
+                        ),
                 ),
-
 
 /* 
 child: _image != null
@@ -410,10 +409,6 @@ child: _image != null
 
 
 */
-
-
-
-
 
                 InkWell(
                   onTap: () async {
@@ -464,9 +459,45 @@ child: _image != null
             ],
           ),
         ),
+        FlatButton(
+          textColor: Color(0xFF6200EE),
+          onPressed: upload,
+          child: Text("TEXT BUTTON"),
+        )
       ]),
     );
   }
 
-  
+  Future<DocumentReference> upload() async {
+    final FirebaseAuth _auth = FirebaseAuth.instance;
+    final Firestore _firestore = Firestore.instance;
+
+    FirebaseUser user = await _auth.currentUser();
+    DocumentReference ref = _firestore.collection('vendors').document(user.uid);
+    getData() async {
+      return await _firestore.collection('vendors').getDocuments();
+    }
+
+    getData().then((val) {
+      if (val.documents.length > 0) {
+        String name = val.documents[0].data["name"];
+      }
+      // else{print("Not Found");}
+    });
+
+    for (int i = 0; i <= 15; i++) {
+      final String id = user.uid;
+      String imageFileName = DateTime.now().millisecondsSinceEpoch.toString();
+      final StorageReference storageReference =
+          FirebaseStorage().ref().child('vendors/$id/$imageFileName');
+      final StorageUploadTask storageUploadTask =
+          storageReference.putFile(hotelImages[i]);
+      StorageTaskSnapshot taskSnapshot = await storageUploadTask.onComplete;
+      await taskSnapshot.ref.getDownloadURL().then((urlImage) {
+        vendorImageURL[i] = urlImage;
+      });
+      await new Future.delayed(const Duration(milliseconds: 5));
+    }
+    return ref;
+  }
 }

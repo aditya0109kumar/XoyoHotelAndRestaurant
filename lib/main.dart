@@ -34,6 +34,7 @@ import 'package:e_shop/Config/config.dart';
 // import 'Vendors/PropertyDetailForm.dart';
 // import 'Vendors/VendorDashBoard.dart';
 // import 'Vendors/UploadMultipleImage.dart';
+import 'Vendors/uploadImages.dart';
 import 'Vendors/vendor_login.dart';
 // import 'Widgets/hotelBookingForm.dart';
 
@@ -87,7 +88,7 @@ class _SplashScreenState extends State<SplashScreen> {
       //   Route route = MaterialPageRoute(builder: (_) => StoreHome());
       //   Navigator.pushReplacement(context, route);
       // } else {
-      Route route = MaterialPageRoute(builder: (_) => VendorSignInPage());
+      Route route = MaterialPageRoute(builder: (_) => MultipleImagePicker());
       Navigator.pushReplacement(context, route);
     }
         // }
