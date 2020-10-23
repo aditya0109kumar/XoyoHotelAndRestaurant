@@ -88,7 +88,7 @@ class _SplashScreenState extends State<SplashScreen> {
       //   Route route = MaterialPageRoute(builder: (_) => StoreHome());
       //   Navigator.pushReplacement(context, route);
       // } else {
-      Route route = MaterialPageRoute(builder: (_) => MultipleImagePicker());
+      Route route = MaterialPageRoute(builder: (_) => VendorSignInPage());
       Navigator.pushReplacement(context, route);
     }
         // }
