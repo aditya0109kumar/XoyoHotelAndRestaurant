@@ -1,5 +1,6 @@
 // import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:e_shop/Authentication/register.dart';
+import 'package:e_shop/Vendors/uploadImages.dart';
 // import 'package:e_shop/Config/configForVendor.dart';
 // import 'package:e_shop/DialogBox/errorDialog.dart';
 // import 'package:firebase_auth/firebase_auth.dart';
@@ -11,16 +12,22 @@ import 'UploadHotelImages.dart';
 // import 'VendorDashBoard.dart';
 
 class PropertyDetailsPage extends StatefulWidget {
+  
   @override
+  
   State<StatefulWidget> createState() => new _State();
 }
 
 class _State extends State<PropertyDetailsPage> {
+  
   @override
   Widget build(BuildContext context) {
+    
     return DefaultTabController(
+      
         length: 2,
         child: Scaffold(
+          
           appBar: AppBar(
             flexibleSpace: Container(
               decoration: new BoxDecoration(
@@ -69,7 +76,7 @@ class _State extends State<PropertyDetailsPage> {
                 ),
               ),
               child: TabBarView(
-                children: [BasicInformation(), UploadHotelImages()],
+                children: [BasicInformation(), MultipleImagePicker()],
               )),
         ));
   }
